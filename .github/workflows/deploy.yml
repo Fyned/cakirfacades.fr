@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -27,3 +28,4 @@ jobs:
             **/node_modules/**
             **/.github/**
             README.md
+            .claude/**
