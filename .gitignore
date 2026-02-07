@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Local Netlify folder
+.netlify/
+
+# Temporary files
+*.log
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Local env files
+.env
+.env.local
+
+# Claude local settings (keep only what's needed)
+.claude/settings.local.json

@@ -1,0 +1,430 @@
+@import 'tailwindcss';
+
+/* Custom theme colors for Cakir Facades */
+@theme {
+  --color-cakir-black: #1A1C1A;
+  --color-cakir-dark: #181818;
+  --color-cakir-darker: #161616;
+  --color-cakir-darkest: #151615;
+  --color-cakir-gold: #A98845;
+  --color-cakir-gold-light: #AB9159;
+  --color-cakir-gold-dark: #A78846;
+  --color-cakir-gold-soft: #A6894B;
+  --color-cakir-gold-warm: #AA8949;
+  --color-cakir-silver: #B5BAB9;
+  --color-cakir-light: #F5F5F0;
+  --color-cakir-offwhite: #FAFAF8;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-cakir-black);
+    background-color: #FFFFFF;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5
+           bg-gradient-to-r from-cakir-gold via-cakir-gold-light to-cakir-gold-dark
+           text-white font-semibold rounded-md
+           transition-all duration-300 ease-out
+           hover:brightness-110 hover:-translate-y-0.5
+           hover:shadow-lg hover:shadow-cakir-gold/25
+           focus:outline-none focus:ring-2 focus:ring-cakir-gold focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3.5
+           border-2 border-cakir-gold text-cakir-gold
+           font-semibold rounded-md bg-transparent
+           transition-all duration-300 ease-out
+           hover:bg-cakir-gold hover:text-white
+           focus:outline-none focus:ring-2 focus:ring-cakir-gold focus:ring-offset-2;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center px-8 py-3.5
+           bg-cakir-black text-white font-semibold rounded-md
+           transition-all duration-300 ease-out
+           hover:bg-cakir-dark
+           focus:outline-none focus:ring-2 focus:ring-cakir-black focus:ring-offset-2;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #A98845 0%, #AB9159 50%, #A78846 100%);
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #A98845 0%, #AB9159 50%, #A78846 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Custom animations - GPU accelerated with will-change */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2s ease-in-out infinite;
+}
+
+/* Scroll-triggered animations using CSS transforms (GPU accelerated) */
+.scroll-fade-up {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-fade-up.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.scroll-fade-down {
+  opacity: 0;
+  transform: translate3d(0, -30px, 0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-fade-down.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.scroll-fade-left {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-fade-left.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.scroll-fade-right {
+  opacity: 0;
+  transform: translate3d(30px, 0, 0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-fade-right.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.scroll-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger container animations */
+.stagger-container .stagger-item {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.stagger-container.is-visible .stagger-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: calc(var(--stagger-index, 0) * var(--stagger-delay, 0.1s));
+}
+
+/* Hover lift effect - replaces framer-motion whileHover */
+.hover-lift {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translate3d(0, -8px, 0);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.card-hover:hover {
+  transform: translate3d(0, -4px, 0);
+}
+
+/* Image zoom on hover */
+.img-zoom {
+  transition: transform 0.6s ease-out;
+}
+
+.group:hover .img-zoom {
+  transform: scale(1.1);
+}
+
+/* Slide animations for testimonials */
+.slide-enter {
+  opacity: 0;
+  transform: translate3d(100px, 0, 0);
+}
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide-exit {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.slide-exit-active {
+  opacity: 0;
+  transform: translate3d(-100px, 0, 0);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-fade-up,
+  .scroll-fade-down,
+  .scroll-fade-left,
+  .scroll-fade-right,
+  .scroll-scale,
+  .stagger-container .stagger-item {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hover-lift:hover,
+  .card-hover:hover {
+    transform: none;
+  }
+
+  .img-zoom,
+  .group:hover .img-zoom {
+    transform: none;
+  }
+
+  .animate-bounce-slow,
+  .animate-fade-in,
+  .animate-fade-in-up {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Mobile sticky CTA styles */
+.mobile-cta-bar {
+  @apply fixed bottom-0 left-0 right-0 z-50
+         bg-cakir-black/95
+         border-t border-cakir-gold/20
+         py-3 px-4
+         flex gap-3
+         md:hidden;
+  /* Safe area for iPhone notch */
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+
+/* Better tap feedback for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  button, a {
+    -webkit-tap-highlight-color: rgba(169, 136, 69, 0.15);
+  }
+
+  /* Disable hover effects on touch - use active instead */
+  .hover-lift:hover,
+  .card-hover:hover {
+    transform: none;
+  }
+
+  .hover-lift:active,
+  .card-hover:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Larger touch targets for mobile */
+  .btn-primary,
+  .btn-secondary,
+  .btn-dark {
+    min-height: 48px;
+  }
+}
+
+/* Mobile-specific responsive adjustments */
+@media (max-width: 768px) {
+  /* Prevent zoom on input focus (iOS) */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  /* Smooth momentum scrolling */
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Reduced animation distance on mobile */
+  .scroll-fade-up {
+    transform: translate3d(0, 20px, 0);
+  }
+
+  .scroll-fade-left,
+  .scroll-fade-right {
+    transform: translate3d(0, 15px, 0);
+  }
+
+  /* Faster animations on mobile */
+  .scroll-fade-up,
+  .scroll-fade-down,
+  .scroll-fade-left,
+  .scroll-fade-right,
+  .scroll-scale {
+    transition-duration: 0.4s;
+  }
+
+  /* Section padding adjustment for mobile */
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Mobile menu slide animation */
+.mobile-menu-slide {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-slide.is-open {
+  transform: translateX(0);
+}
+
+/* Safe area insets for modern devices */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Mobile scroll lock utility */
+.body-scroll-lock {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+/* Mobile card press effect */
+@media (hover: none) {
+  .card-hover:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Swipe indicator for mobile carousels */
+.swipe-indicator {
+  width: 40px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  margin: 12px auto;
+}
+
+/* Mobile-friendly focus states */
+@media (max-width: 768px) {
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible {
+    outline: 2px solid var(--color-cakir-gold);
+    outline-offset: 2px;
+  }
+}
