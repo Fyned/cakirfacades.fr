@@ -1,0 +1,15 @@
+# Robots.txt for cakirfacades.fr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cakirfacades.fr/sitemap.xml
+
+# Disallow admin or private paths (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

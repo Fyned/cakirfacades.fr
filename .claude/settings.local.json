@@ -1,13 +1,31 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git init:*)",
+      "Bash(ls:*)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout:*)",
+      "Bash(curl:*)",
+      "Bash(npm run preview:*)",
+      "Bash(dir:*)",
+      "WebFetch(domain:www.sitebuilderreport.com)",
+      "Bash(npx netlify deploy:*)",
+      "Bash(pkill:*)",
+      "Bash(npx netlify-cli link:*)",
+      "Bash(npx netlify-cli:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Maintenance page for Cakir Facades\n\n- Add responsive maintenance page in French\n- Add floating animated geometric shapes\n- Add company contact information\n- Add GitHub Actions FTP deployment workflow\n- Include company logo\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git branch:*)",
-      "Bash(git remote add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nDeploy complete Cakir Facades website\n\n- Full React SPA with Vite build\n- All pages with PageHero backgrounds\n- Performance optimized \\(CSS animations, no framer-motion\\)\n- Mobile responsive design\n- SEO optimized with structured data\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git push:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nFix workflow: add workflow_dispatch and update excludes\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nFix PageHero image paths for all pages\n\n- Fixed incorrect image paths in PageHero components\n- Realisations: projet-01-ravalement-immeuble-pierre\n- Blog: projet-10-cloture-palmiye-desen\n- FAQ: projet-12-neuf-beige\n- Contact: projet-05-cloture-beige-jardin\n- DevisGratuit: projet-15-maison-pierre-fenetre\n\nAll pages tested and verified working\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(git init:*)",
+      "Bash(gh repo list:*)",
+      "Bash(git remote add:*)",
+      "Bash(git fetch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git stash:*)",
+      "Bash(git reset:*)"
     ]
   }
 }
