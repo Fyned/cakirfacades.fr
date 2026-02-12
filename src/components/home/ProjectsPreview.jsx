@@ -48,7 +48,11 @@ export default function ProjectsPreview() {
                   {/* Category Tag */}
                   <div className="absolute top-4 left-4">
                     <span className="inline-block bg-cakir-gold/90 text-white text-xs font-medium px-3 py-1 rounded-full capitalize">
-                      {Array.isArray(project.category) ? project.category[0] : project.category}
+                      {project.category === 'construction-neuf' ? 'Construction Neuf' :
+                       project.category === 'enduit-imitation-pierre' ? 'Enduit Imitation Pierre' :
+                       project.category === 'renovation' ? 'Rénovation' :
+                       project.category === 'isolation-exterieure' ? 'Isolation Extérieure' :
+                       project.category}
                     </span>
                   </div>
 
