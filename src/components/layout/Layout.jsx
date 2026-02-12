@@ -5,7 +5,7 @@ import TopBar from './TopBar'
 import Footer from './Footer'
 import MobileCTA from './MobileCTA'
 import ScrollToTop from '../ui/ScrollToTop'
-import CookieBanner from '../ui/CookieBanner'
+import ConsentBanner from '../ui/ConsentBanner'
 
 export default function Layout() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,7 +37,7 @@ export default function Layout() {
       <Footer />
       <MobileCTA />
       <ScrollToTop />
-      <CookieBanner />
+      <ConsentBanner />
     </div>
   )
 }

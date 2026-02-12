@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
-import { MapPin, X, ChevronLeft, ChevronRight, ArrowRight, Grid, LayoutGrid } from 'lucide-react'
+import { MapPin, X, ChevronLeft, ChevronRight, ArrowRight, ArrowLeft, Images } from 'lucide-react'
 import SEOHead from '../components/seo/SEOHead'
 import { LocalBusinessSchema, BreadcrumbSchema } from '../components/seo/StructuredData'
 import Button from '../components/ui/Button'
@@ -7,29 +7,39 @@ import PageHero from '../components/ui/PageHero'
 import { seoMeta } from '../data/seo-meta'
 import { projects, projectCategories, getProjectsByCategory } from '../data/projects'
 
+// Category cover images - first project's cover from each category
+const categoryCovers = {
+  'construction-neuf': '/images/projects/projet-17-neuf-moderne-blanc-gris/cover.jpg',
+  'enduit-imitation-pierre': '/images/projects/projet-07-enduit-interieur/cover.jpg',
+  'renovation': '/images/projects/projet-01-ravalement-immeuble-pierre/cover.jpg',
+  'isolation-exterieure': '/images/projects/projet-08-isolation-ite/cover.jpg',
+}
+
 export default function Realisations() {
-  const [activeCategory, setActiveCategory] = useState('all')
+  const [activeCategory, setActiveCategory] = useState(null)
   const [selectedProject, setSelectedProject] = useState(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [viewMode, setViewMode] = useState('grid') // 'grid' or 'masonry'
-  const [isAnimating, setIsAnimating] = useState(false)
   const lightboxRef = useRef(null)
+  const galleryRef = useRef(null)
 
-  const filteredProjects = getProjectsByCategory(activeCategory)
+  const filteredProjects = activeCategory ? getProjectsByCategory(activeCategory) : []
+  const activeCategoryData = projectCategories.find(c => c.id === activeCategory)
 
   const breadcrumbs = [
     { name: 'Accueil', href: '/' },
     { name: 'Nos Réalisations', href: '/nos-realisations' },
   ]
 
-  // Handle category change with animation
-  const handleCategoryChange = (category) => {
-    if (category === activeCategory) return
-    setIsAnimating(true)
+  const handleCategorySelect = (categoryId) => {
+    setActiveCategory(categoryId)
     setTimeout(() => {
-      setActiveCategory(category)
-      setIsAnimating(false)
-    }, 150)
+      galleryRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 100)
+  }
+
+  const handleBackToCategories = () => {
+    setActiveCategory(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const openLightbox = useCallback((project, imageIndex = 0) => {
@@ -95,159 +105,192 @@ export default function Realisations() {
         badge="Portfolio"
       />
 
-      {/* Filters */}
-      <section className="bg-white py-8 border-b border-cakir-gray sticky top-20 z-30">
-        <div className="container-custom">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
-              {projectCategories.map((category) => (
+      {/* Category Cards */}
+      {!activeCategory && (
+        <section className="section-padding bg-cakir-gray">
+          <div className="container-custom">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-cakir-black mb-4">
+                Nos Catégories de Projets
+              </h2>
+              <p className="text-cakir-black/60 max-w-2xl mx-auto">
+                Sélectionnez une catégorie pour découvrir nos réalisations
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {projectCategories.filter(c => c.id !== 'all').map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => handleCategoryChange(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeCategory === category.id
-                      ? 'bg-cakir-gold text-white'
-                      : 'bg-cakir-gray text-cakir-black/70 hover:bg-cakir-gold/10 hover:text-cakir-gold'
-                  }`}
+                  onClick={() => handleCategorySelect(category.id)}
+                  className="group relative overflow-hidden rounded-2xl aspect-[16/10] shadow-md hover:shadow-xl transition-all duration-300"
                 >
-                  {category.name}
-                  <span className="ml-1 opacity-60">({category.count})</span>
-                </button>
-              ))}
-            </div>
-
-            {/* View Toggle */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-lg transition-colors ${
-                  viewMode === 'grid'
-                    ? 'bg-cakir-gold text-white'
-                    : 'bg-cakir-gray text-cakir-black/60 hover:text-cakir-gold'
-                }`}
-                aria-label="Vue grille"
-              >
-                <Grid className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => setViewMode('masonry')}
-                className={`p-2 rounded-lg transition-colors ${
-                  viewMode === 'masonry'
-                    ? 'bg-cakir-gold text-white'
-                    : 'bg-cakir-gray text-cakir-black/60 hover:text-cakir-gold'
-                }`}
-                aria-label="Vue masonry"
-              >
-                <LayoutGrid className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Grid */}
-      <section className="section-padding bg-cakir-gray">
-        <div className="container-custom">
-          <div
-            className={`transition-opacity duration-150 ${isAnimating ? 'opacity-0' : 'opacity-100'} ${
-              viewMode === 'grid'
-                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
-                : 'columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6'
-            }`}
-          >
-            {filteredProjects.map((project, index) => (
-              <article
-                key={project.id}
-                className={`group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 scroll-fade-up is-visible ${
-                  viewMode === 'masonry' ? 'break-inside-avoid' : ''
-                }`}
-                style={{ transitionDelay: `${index * 0.05}s` }}
-              >
-                {/* Main Image */}
-                <div
-                  className={`relative overflow-hidden cursor-pointer ${
-                    viewMode === 'grid' ? 'aspect-[4/3]' : ''
-                  }`}
-                  onClick={() => openLightbox(project, 0)}
-                >
+                  {/* Background Image */}
                   <img
-                    src={project.coverImage}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    src={categoryCovers[category.id]}
+                    alt={category.name}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  {/* Image Count Badge */}
-                  {project.images.length > 1 && (
-                    <div className="absolute top-4 right-4 bg-black/50 text-white text-sm px-3 py-1 rounded-full">
-                      {project.images.length} photos
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 group-hover:from-black/90 group-hover:via-black/50 transition-all duration-300" />
+                  {/* Content */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <h3 className="text-white text-2xl md:text-3xl font-bold mb-3">
+                      {category.name}
+                    </h3>
+                    <div className="flex items-center gap-2 text-white/80 text-sm mb-4">
+                      <Images className="w-4 h-4" />
+                      <span>{category.count} projets</span>
                     </div>
-                  )}
-                  {/* View More Button */}
-                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="inline-flex items-center gap-2 text-white font-medium">
-                      Voir le projet
+                    <span className="inline-flex items-center gap-2 bg-cakir-gold text-white px-5 py-2.5 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                      Voir les projets
                       <ArrowRight className="w-4 h-4" />
                     </span>
                   </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Category Gallery View */}
+      {activeCategory && (
+        <>
+          {/* Back Button & Category Title */}
+          <section ref={galleryRef} className="bg-white py-6 border-b border-cakir-gray sticky top-20 z-30">
+            <div className="container-custom">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <button
+                    onClick={handleBackToCategories}
+                    className="flex items-center gap-2 text-cakir-black/70 hover:text-cakir-gold transition-colors font-medium"
+                  >
+                    <ArrowLeft className="w-5 h-5" />
+                    <span className="hidden sm:inline">Toutes les catégories</span>
+                    <span className="sm:hidden">Retour</span>
+                  </button>
+                  <div className="h-6 w-px bg-cakir-black/20" />
+                  <h2 className="text-lg font-bold text-cakir-black">
+                    {activeCategoryData?.name}
+                    <span className="ml-2 text-sm font-normal text-cakir-black/50">
+                      ({filteredProjects.length} projets)
+                    </span>
+                  </h2>
                 </div>
 
-                {/* Content */}
-                <div className="p-5">
-                  <h3 className="font-bold text-lg mb-2 group-hover:text-cakir-gold transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-cakir-black/60 text-sm mb-3 line-clamp-2">
-                    {project.description}
-                  </p>
-                  <div className="flex items-center gap-2 text-sm text-cakir-black/50">
-                    <MapPin className="w-4 h-4" />
-                    {project.location}
-                  </div>
-                  {/* Thumbnails */}
-                  {project.images.length > 1 && (
-                    <div className="flex gap-2 mt-4 overflow-x-auto pb-1">
-                      {project.images.slice(0, 4).map((img, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => openLightbox(project, idx)}
-                          className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden hover:ring-2 hover:ring-cakir-gold transition-all"
-                        >
-                          <img
-                            src={img}
-                            alt={`${project.title} - ${idx + 1}`}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
-                        </button>
-                      ))}
-                      {project.images.length > 4 && (
-                        <button
-                          onClick={() => openLightbox(project, 4)}
-                          className="flex-shrink-0 w-14 h-14 rounded-lg bg-cakir-black/10 flex items-center justify-center text-sm font-medium text-cakir-black/60 hover:bg-cakir-gold/20 hover:text-cakir-gold transition-colors"
-                        >
-                          +{project.images.length - 4}
-                        </button>
+                {/* Other categories quick nav */}
+                <div className="hidden md:flex items-center gap-2">
+                  {projectCategories.filter(c => c.id !== 'all' && c.id !== activeCategory).map((cat) => (
+                    <button
+                      key={cat.id}
+                      onClick={() => handleCategorySelect(cat.id)}
+                      className="px-3 py-1.5 rounded-full text-xs font-medium bg-cakir-gray text-cakir-black/60 hover:bg-cakir-gold/10 hover:text-cakir-gold transition-all"
+                    >
+                      {cat.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Projects Grid */}
+          <section className="section-padding bg-cakir-gray">
+            <div className="container-custom">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredProjects.map((project, index) => (
+                  <article
+                    key={project.id}
+                    className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                  >
+                    {/* Main Image */}
+                    <div
+                      className="relative overflow-hidden cursor-pointer aspect-[4/3]"
+                      onClick={() => openLightbox(project, 0)}
+                    >
+                      <img
+                        src={project.coverImage}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      {/* Image Count Badge */}
+                      {project.images.length > 1 && (
+                        <div className="absolute top-4 right-4 bg-black/50 text-white text-sm px-3 py-1 rounded-full">
+                          {project.images.length} photos
+                        </div>
+                      )}
+                      {/* View More Button */}
+                      <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="inline-flex items-center gap-2 text-white font-medium">
+                          Voir le projet
+                          <ArrowRight className="w-4 h-4" />
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-5">
+                      <h3 className="font-bold text-lg mb-2 group-hover:text-cakir-gold transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-cakir-black/60 text-sm mb-3 line-clamp-2">
+                        {project.description}
+                      </p>
+                      <div className="flex items-center gap-2 text-sm text-cakir-black/50">
+                        <MapPin className="w-4 h-4" />
+                        {project.location}
+                      </div>
+                      {/* Thumbnails */}
+                      {project.images.length > 1 && (
+                        <div className="flex gap-2 mt-4 overflow-x-auto pb-1">
+                          {project.images.slice(0, 4).map((img, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => openLightbox(project, idx)}
+                              className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden hover:ring-2 hover:ring-cakir-gold transition-all"
+                            >
+                              <img
+                                src={img}
+                                alt={`${project.title} - ${idx + 1}`}
+                                className="w-full h-full object-cover"
+                                loading="lazy"
+                              />
+                            </button>
+                          ))}
+                          {project.images.length > 4 && (
+                            <button
+                              onClick={() => openLightbox(project, 4)}
+                              className="flex-shrink-0 w-14 h-14 rounded-lg bg-cakir-black/10 flex items-center justify-center text-sm font-medium text-cakir-black/60 hover:bg-cakir-gold/20 hover:text-cakir-gold transition-colors"
+                            >
+                              +{project.images.length - 4}
+                            </button>
+                          )}
+                        </div>
                       )}
                     </div>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
+                  </article>
+                ))}
+              </div>
 
-          {/* Empty State */}
-          {filteredProjects.length === 0 && (
-            <div className="text-center py-16">
-              <p className="text-cakir-black/60 text-lg">
-                Aucun projet trouvé dans cette catégorie.
-              </p>
+              {/* Back to categories button at bottom */}
+              <div className="text-center mt-12">
+                <button
+                  onClick={handleBackToCategories}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full text-cakir-black/70 hover:text-cakir-gold hover:shadow-md transition-all font-medium"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  Voir toutes les catégories
+                </button>
+              </div>
             </div>
-          )}
-        </div>
-      </section>
+          </section>
+        </>
+      )}
 
       {/* Lightbox */}
       {selectedProject && (

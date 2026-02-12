@@ -3,7 +3,7 @@ export const projects = [
     id: 'projet-01',
     title: 'Ravalement Immeuble Pierre',
     description: 'Ravalement complet d\'un immeuble en pierre de taille à Châteaubriant. Nettoyage haute pression, traitement anti-mousse, rejointoiement traditionnel à la chaux et mise en valeur des encadrements de fenêtres. Travaux réalisés sur échafaudage avec respect du patrimoine architectural.',
-    category: ['ravalement', 'renovation'],
+    category: 'renovation',
     location: 'Châteaubriant',
     images: [
       '/images/projects/projet-01-ravalement-immeuble-pierre/cover.jpg',
@@ -19,7 +19,7 @@ export const projects = [
     id: 'projet-02',
     title: 'Enduit Pierre Gris Clôture',
     description: 'Réalisation d\'un mur de clôture en enduit sculpté imitation pierre gris anthracite. Technique artisanale de pierre sculptée avec joints marqués à la main. Finition hydrofuge appliquée pour une durabilité optimale face aux intempéries.',
-    category: ['enduit-decoratif', 'enduit-pierre', 'cloture'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-02-enduit-pierre-gris-cloture/cover.jpg',
@@ -29,10 +29,22 @@ export const projects = [
     featured: true,
   },
   {
+    id: 'projet-03',
+    title: 'Enduit Beige Maison',
+    description: 'Application d\'enduit de façade couleur beige sur maison neuve en cours de construction. Travail sur échafaudage avec enduit monocouche lissé. Finition uniforme et soignée sur l\'ensemble des murs extérieurs.',
+    category: 'construction-neuf',
+    location: 'Loire-Atlantique',
+    images: [
+      '/images/projects/projet-03-enduit-beige-maison/cover.jpg',
+    ],
+    coverImage: '/images/projects/projet-03-enduit-beige-maison/cover.jpg',
+    featured: false,
+  },
+  {
     id: 'projet-04',
     title: 'Clôture Pierre Gris Palmier',
     description: 'Mur de clôture avec forme arrondie en enduit imitation pierre gris anthracite. Design moderne intégrant des courbes élégantes. Technique de sculpture sur enduit frais avec finition soignée des joints en creux.',
-    category: ['enduit-decoratif', 'enduit-pierre', 'cloture'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-04-cloture-gris-palmier/cover.jpg',
@@ -46,7 +58,7 @@ export const projects = [
     id: 'projet-05',
     title: 'Muret Jardin Beige',
     description: 'Muret de jardin habillé d\'un enduit imitation pierre couleur beige/sable. Intégration harmonieuse dans l\'environnement paysager avec végétation. Finition effet pierre naturelle avec joints travaillés à la main.',
-    category: ['enduit-decoratif', 'enduit-pierre', 'cloture'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-05-cloture-beige-jardin/cover.jpg',
@@ -59,7 +71,7 @@ export const projects = [
     id: 'projet-06',
     title: 'Façade Enduit Jaune Pierre',
     description: 'Enduit décoratif imitation pierre couleur jaune/ocre sur façade de maison individuelle. Teinte chaude rappelant la pierre de tuffeau. Aspect authentique et traditionnel avec relief prononcé et joints marqués.',
-    category: ['enduit-decoratif', 'enduit-pierre'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-06-enduit-jaune-maison/cover.jpg',
@@ -73,7 +85,7 @@ export const projects = [
     id: 'projet-07',
     title: 'Enduit Intérieur Pierre',
     description: 'Habillage intérieur en enduit imitation pierre beige pour une entrée de maison. Création d\'un effet pierre naturelle avec joints en creux autour de l\'escalier et de la porte d\'entrée design. Travail minutieux adapté aux contraintes intérieures.',
-    category: ['enduit-decoratif', 'enduit-pierre'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-07-enduit-interieur/cover.jpg',
@@ -89,7 +101,7 @@ export const projects = [
     id: 'projet-08',
     title: 'Isolation Thermique Extérieure',
     description: 'Isolation thermique par l\'extérieur (ITE) d\'une maison individuelle. Pose de panneaux de polystyrène expansé, sous-enduit armé et enduit de finition gratté. Solution performante pour améliorer le confort thermique et réduire les factures énergétiques.',
-    category: ['isolation'],
+    category: 'isolation-exterieure',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-08-isolation-ite/cover.jpg',
@@ -100,10 +112,23 @@ export const projects = [
     featured: false,
   },
   {
+    id: 'projet-09',
+    title: 'Rénovation Terrasse Pierre',
+    description: 'Rénovation complète d\'une terrasse et d\'un garage sur une maison en pierre. Création d\'une terrasse en béton, reprise des enduits et mise en valeur des pierres existantes. Intégration d\'un carport moderne avec habillage pierre décoratif.',
+    category: 'renovation',
+    location: 'Loire-Atlantique',
+    images: [
+      '/images/projects/projet-09-renovation-teras/cover.jpg',
+      '/images/projects/projet-09-renovation-teras/01.jpg',
+    ],
+    coverImage: '/images/projects/projet-09-renovation-teras/cover.jpg',
+    featured: false,
+  },
+  {
     id: 'projet-10',
     title: 'Clôture Palmiers Sculptés',
     description: 'Création artistique exclusive : clôture avec motifs de palmiers sculptés à la main dans l\'enduit frais. Technique unique de sculpture réalisée par nos artisans. Rendu trois dimensions avec jeux d\'ombres naturels. Pièce unique et personnalisée.',
-    category: ['enduit-decoratif', 'cloture'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-10-cloture-palmiye-desen/cover.jpg',
@@ -116,7 +141,7 @@ export const projects = [
     id: 'projet-11',
     title: 'Maison Moderne Blanc Gris',
     description: 'Construction neuve style contemporain avec bi-coloration : enduit blanc lissé sur les volumes principaux et habillage pierre gris anthracite sur le garage et les soubassements. Finitions soignées autour des menuiseries.',
-    category: ['enduit-decoratif', 'enduit-pierre', 'neuf'],
+    category: 'construction-neuf',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-11-maison-moderne-gris/cover.jpg',
@@ -129,7 +154,7 @@ export const projects = [
     id: 'projet-12',
     title: 'Construction Neuve Enduit Beige',
     description: 'Réalisation de l\'enduit de façade sur maison neuve de plain-pied. Finition lisse couleur beige clair avec bandeaux décoratifs. Application soignée avec respect des temps de séchage pour un résultat durable.',
-    category: ['neuf', 'enduit'],
+    category: 'construction-neuf',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-12-neuf-beige/cover.jpg',
@@ -140,10 +165,25 @@ export const projects = [
     featured: false,
   },
   {
+    id: 'projet-13',
+    title: 'Enduit Blanc Détail',
+    description: 'Enduit imitation pierre blanc sur façade de maison. Technique de sculpture artisanale avec joints marqués créant un effet pierre naturelle. Encadrements de fenêtres travaillés avec soin pour un rendu authentique et élégant.',
+    category: 'enduit-imitation-pierre',
+    location: 'Loire-Atlantique',
+    images: [
+      '/images/projects/projet-13-enduit-blanc-detail/cover.jpg',
+      '/images/projects/projet-13-enduit-blanc-detail/01.jpg',
+      '/images/projects/projet-13-enduit-blanc-detail/02.jpg',
+      '/images/projects/projet-13-enduit-blanc-detail/03.jpg',
+    ],
+    coverImage: '/images/projects/projet-13-enduit-blanc-detail/cover.jpg',
+    featured: false,
+  },
+  {
     id: 'projet-14',
     title: 'Entrée Enduit Pierre Gris',
     description: 'Habillage de l\'entrée de maison avec enduit imitation pierre gris anthracite. Mise en valeur de la porte d\'entrée et du seuil avec un encadrement en pierre sculptée. Contraste élégant avec les menuiseries et l\'enduit clair environnant.',
-    category: ['enduit-decoratif', 'enduit-pierre'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-14-enduit-gris-entree/cover.jpg',
@@ -159,7 +199,7 @@ export const projects = [
     id: 'projet-15',
     title: 'Maison Pierre Fenêtres',
     description: 'Enduit décoratif imitation pierre beige sur l\'ensemble de la façade avec encadrements de fenêtres mis en valeur. Style traditionnel breton revisité avec des techniques modernes. Joints travaillés à la main pour un aspect authentique.',
-    category: ['enduit-decoratif', 'enduit-pierre', 'renovation'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-15-maison-pierre-fenetre/cover.jpg',
@@ -174,7 +214,7 @@ export const projects = [
     id: 'projet-16',
     title: 'Maison Moderne Véranda',
     description: 'Construction moderne avec enduit pierre beige et véranda aluminium. Association réussie de matériaux contemporains : enduit sculpté, menuiseries aluminium anthracite et véranda toiture plate. Harmonisation des couleurs et textures.',
-    category: ['enduit-decoratif', 'enduit-pierre', 'neuf'],
+    category: 'construction-neuf',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-16-maison-moderne-veranda/cover.jpg',
@@ -191,7 +231,7 @@ export const projects = [
     id: 'projet-17',
     title: 'Maison Blanc et Pierre Gris',
     description: 'Construction neuve style contemporain avec bi-coloration : enduit blanc lissé sur les volumes principaux et habillage pierre gris anthracite sur les avancées et le garage. Finitions soignées autour des menuiseries aluminium noir.',
-    category: ['enduit-decoratif', 'enduit-pierre', 'neuf'],
+    category: 'construction-neuf',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-17-neuf-moderne-blanc-gris/cover.jpg',
@@ -209,7 +249,7 @@ export const projects = [
     id: 'projet-18',
     title: 'Lotissement Maisons Neuves',
     description: 'Réalisation des enduits sur un lotissement de plusieurs maisons neuves. Enduit monocouche sur les façades et habillage pierre décoratif sur les garages. Coordination des travaux pour un rendu homogène sur l\'ensemble du lotissement.',
-    category: ['enduit-decoratif', 'enduit-pierre', 'neuf'],
+    category: 'construction-neuf',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-18-lotissement/cover.jpg',
@@ -222,10 +262,26 @@ export const projects = [
     featured: false,
   },
   {
+    id: 'projet-19',
+    title: 'Enduit Beige Clôture',
+    description: 'Réalisation d\'un enduit imitation pierre beige sur façade de maison avec finition soignée. Habillage décoratif avec panneaux en pierre naturelle sur mur d\'accent. Terrasse aménagée avec intégration harmonieuse des matériaux.',
+    category: 'enduit-imitation-pierre',
+    location: 'Loire-Atlantique',
+    images: [
+      '/images/projects/projet-19-enduit-beige-maison/cover.jpg',
+      '/images/projects/projet-19-enduit-beige-maison/01.jpg',
+      '/images/projects/projet-19-enduit-beige-maison/02.jpg',
+      '/images/projects/projet-19-enduit-beige-maison/03.jpg',
+      '/images/projects/projet-19-enduit-beige-maison/04.jpg',
+    ],
+    coverImage: '/images/projects/projet-19-enduit-beige-maison/cover.jpg',
+    featured: false,
+  },
+  {
     id: 'projet-20',
     title: 'Maison Décor Aigle',
     description: 'Œuvre d\'art monumentale : sculpture d\'un aigle déployant ses ailes réalisée directement dans l\'enduit de façade. Technique mixte combinant enduit sculpté en relief et gravure de détails. Pièce unique signée Cakir Facades, démontrant notre savoir-faire artisanal.',
-    category: ['enduit-decoratif'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-20-kartal-desen/cover.jpg',
@@ -242,7 +298,7 @@ export const projects = [
     id: 'projet-21',
     title: 'Muret Jardin Fleuri',
     description: 'Muret de jardin avec enduit imitation pierre beige clair. Intégration parfaite dans un jardin fleuri et paysager. Courbes douces et hauteur adaptée pour délimiter l\'espace tout en conservant une vue dégagée.',
-    category: ['enduit-decoratif', 'enduit-pierre', 'cloture'],
+    category: 'enduit-imitation-pierre',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-21-muret-jardin/cover.jpg',
@@ -259,7 +315,7 @@ export const projects = [
     id: 'projet-22',
     title: 'Maison Bicolore Neuve',
     description: 'Construction neuve avec enduit bicolore : crème sur les façades principales et gris anthracite sur les volumes en saillie. Style contemporain avec lignes épurées. Finition talochée pour un aspect moderne et élégant.',
-    category: ['neuf', 'enduit'],
+    category: 'construction-neuf',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-22-neuf-bicolore/cover.jpg',
@@ -275,10 +331,27 @@ export const projects = [
     featured: false,
   },
   {
+    id: 'projet-24',
+    title: 'Enduit Pierre Beige Neuf',
+    description: 'Construction neuve avec application d\'enduit de façade beige et détails gris anthracite. Maison à étage de style moderne avec menuiseries aluminium noir. Travaux en cours avec finitions soignées sur l\'ensemble des façades.',
+    category: 'construction-neuf',
+    location: 'Loire-Atlantique',
+    images: [
+      '/images/projects/projet-24-enduit-pierre-beige-neuf/cover.jpg',
+      '/images/projects/projet-24-enduit-pierre-beige-neuf/01.jpg',
+      '/images/projects/projet-24-enduit-pierre-beige-neuf/02.jpg',
+      '/images/projects/projet-24-enduit-pierre-beige-neuf/03.jpg',
+      '/images/projects/projet-24-enduit-pierre-beige-neuf/04.jpg',
+      '/images/projects/projet-24-enduit-pierre-beige-neuf/05.jpg',
+    ],
+    coverImage: '/images/projects/projet-24-enduit-pierre-beige-neuf/cover.jpg',
+    featured: false,
+  },
+  {
     id: 'projet-23',
     title: 'Ravalement Maison Ancienne',
     description: 'Ravalement d\'une maison ancienne en pierre avec conservation du caractère patrimonial. Nettoyage délicat des pierres, réparation des joints dégradés et traitement hydrofuge. Respect des techniques traditionnelles pour préserver l\'authenticité du bâti.',
-    category: ['ravalement', 'renovation'],
+    category: 'renovation',
     location: 'Loire-Atlantique',
     images: [
       '/images/projects/projet-23-ravalement-ancien/cover.jpg',
@@ -292,12 +365,10 @@ export const projects = [
 
 export const projectCategories = [
   { id: 'all', name: 'Tous', count: projects.length },
-  { id: 'enduit-decoratif', name: 'Enduit Décoratif', count: projects.filter(p => p.category.includes('enduit-decoratif')).length },
-  { id: 'enduit-pierre', name: 'Enduit Pierre', count: projects.filter(p => p.category.includes('enduit-pierre')).length },
-  { id: 'ravalement', name: 'Ravalement', count: projects.filter(p => p.category.includes('ravalement')).length },
-  { id: 'isolation', name: 'Isolation', count: projects.filter(p => p.category.includes('isolation')).length },
-  { id: 'neuf', name: 'Neuf', count: projects.filter(p => p.category.includes('neuf')).length },
-  { id: 'cloture', name: 'Clôture', count: projects.filter(p => p.category.includes('cloture')).length },
+  { id: 'construction-neuf', name: 'Construction Neuf', count: projects.filter(p => p.category === 'construction-neuf').length },
+  { id: 'enduit-imitation-pierre', name: 'Enduit Imitation Pierre', count: projects.filter(p => p.category === 'enduit-imitation-pierre').length },
+  { id: 'renovation', name: 'Rénovation', count: projects.filter(p => p.category === 'renovation').length },
+  { id: 'isolation-exterieure', name: 'Isolation Extérieure', count: projects.filter(p => p.category === 'isolation-exterieure').length },
 ]
 
 export const getFeaturedProjects = () => {
@@ -306,5 +377,5 @@ export const getFeaturedProjects = () => {
 
 export const getProjectsByCategory = (category) => {
   if (category === 'all') return projects
-  return projects.filter(p => p.category.includes(category))
+  return projects.filter(p => p.category === category)
 }
