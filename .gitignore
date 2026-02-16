@@ -21,3 +21,5 @@ dist/
 
 # Claude local settings (keep only what's needed)
 .claude/settings.local.json
+.claude/
+CLAUDE-CODE-PROMPT.md
