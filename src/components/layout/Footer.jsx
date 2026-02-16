@@ -233,6 +233,15 @@ export default function Footer() {
               >
                 Contact
               </Link>
+              <span className="text-white/20">|</span>
+              <a
+                href="https://dmckreatif.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/40 hover:text-white/70 transition-colors text-xs"
+              >
+                Créé par DMC Kreatif
+              </a>
             </div>
           </div>
         </div>
