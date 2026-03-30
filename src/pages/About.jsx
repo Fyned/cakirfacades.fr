@@ -59,7 +59,7 @@ export default function About() {
       <PageHero
         title="À Propos de Cakir Facades"
         subtitle="Artisan façadier basé à Châteaubriant, nous mettons notre savoir-faire au service de vos projets de rénovation et d'embellissement de façades."
-        image="/images/projects/projet-17-neuf-moderne-blanc-gris/cover.jpg"
+        image="/images/hero/hero-about.png"
         breadcrumbs={breadcrumbs}
         badge="Notre Entreprise"
       />
@@ -105,7 +105,7 @@ export default function About() {
             >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <img
-                  src="/images/projects/projet-17-neuf-moderne-blanc-gris/cover.jpg"
+                  src="/images/projects/enduit-imitation-pierre/05.jpg"
                   alt="Réalisation Cakir Facades"
                   className="w-full h-full object-cover"
                 />

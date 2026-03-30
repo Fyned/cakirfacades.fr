@@ -56,7 +56,7 @@ export default function Contact() {
       <PageHero
         title="Contactez-Nous"
         subtitle="Une question sur nos services ? Un projet de façade à nous soumettre ? N'hésitez pas à nous contacter, nous vous répondrons dans les plus brefs délais."
-        image="/images/projects/projet-05-cloture-beige-jardin/cover.jpg"
+        image="/images/hero/hero-contact.png"
         breadcrumbs={breadcrumbs}
         badge="Contact"
       />

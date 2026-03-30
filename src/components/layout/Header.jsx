@@ -118,7 +118,7 @@ export default function Header({ topBarVisible = true }) {
 
                       {/* Services Grid */}
                       <div className="grid grid-cols-2 gap-1 p-2">
-                        {services.slice(0, 4).map((service) => (
+                        {services.map((service) => (
                           <Link
                             key={service.slug}
                             to={`/nos-services/${service.slug}`}

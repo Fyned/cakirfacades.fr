@@ -112,7 +112,7 @@ export default function DevisGratuit() {
       <PageHero
         title="Demandez Votre Devis Gratuit"
         subtitle="Remplissez le formulaire ci-dessous pour recevoir un devis personnalisé pour votre projet de façade. Réponse garantie sous 24h."
-        image="/images/projects/projet-15-maison-pierre-fenetre/cover.jpg"
+        image="/images/hero/hero-devis.png"
         breadcrumbs={breadcrumbs}
         badge="Devis Gratuit"
       />

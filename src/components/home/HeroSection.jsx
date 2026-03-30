@@ -24,7 +24,8 @@ export default function HeroSection() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: 'url(/images/projects/projet-02-enduit-pierre-gris-cloture/cover.jpg)'
+            backgroundImage: 'url(/images/hero/hero-home.png)',
+            backgroundColor: '#1a1a1a'
           }}
         />
         {/* Gradient Overlay */}

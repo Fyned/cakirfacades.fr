@@ -37,7 +37,7 @@ export default function Blog() {
       <PageHero
         title="Nos Articles et Guides"
         subtitle="Retrouvez nos conseils d'experts sur le ravalement de façade, l'isolation thermique, les aides financières et l'entretien de vos façades."
-        image="/images/projects/projet-10-cloture-palmiye-desen/cover.jpg"
+        image="/images/hero/hero-blog.png"
         breadcrumbs={breadcrumbs}
         badge="Blog & Conseils"
       />

@@ -9,7 +9,7 @@ export default function CTASection() {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url(/images/projects/projet-08-isolation-ite/cover.jpg)' }}
+        style={{ backgroundImage: 'url(/images/hero/hero-cta.png)', backgroundColor: '#1a1a1a' }}
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-cakir-black/95 via-cakir-black/90 to-cakir-black/80" />

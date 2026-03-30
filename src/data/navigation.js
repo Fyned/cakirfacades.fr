@@ -4,10 +4,11 @@ export const navigation = [
     name: 'Nos Services',
     href: '/nos-services',
     children: [
-      { name: 'Enduit de Façade', href: '/nos-services/enduit-de-facade' },
-      { name: 'Ravalement de Façades', href: '/nos-services/ravalement-de-facades' },
-      { name: 'Isolation Extérieure', href: '/nos-services/isolation-exterieure' },
-      { name: 'Neuf & Rénovation', href: '/nos-services/neuf-et-renovation' },
+      { name: 'Construction Neuf', href: '/nos-services/construction-neuf' },
+      { name: 'Enduit Imitation Pierre', href: '/nos-services/enduit-imitation-pierre' },
+      { name: 'Gouttière en Aluminium', href: '/nos-services/gouttiere-aluminium' },
+      { name: 'Isolant Extérieur', href: '/nos-services/isolant-exterieur' },
+      { name: 'Rénovation de Façade', href: '/nos-services/renovation' },
     ]
   },
   { name: 'Nos Réalisations', href: '/nos-realisations' },

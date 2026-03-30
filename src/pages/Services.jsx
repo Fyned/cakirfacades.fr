@@ -24,7 +24,7 @@ export default function Services() {
       <PageHero
         title="Nos Services de Façade Professionnels"
         subtitle="Découvrez notre gamme complète de prestations pour sublimer et protéger vos façades. De l'enduit décoratif à l'isolation thermique, nous avons la solution pour votre projet."
-        image="/images/projects/projet-03-enduit-beige-maison/cover.jpg"
+        image="/images/hero/hero-about.png"
         breadcrumbs={breadcrumbs}
         badge="Nos Expertises"
       />
@@ -39,7 +39,7 @@ export default function Services() {
 
               return (
                 <ScrollReveal
-                  key={service.id}
+                  key={service.slug}
                   animation="fadeUp"
                   delay={index * 0.1}
                 >

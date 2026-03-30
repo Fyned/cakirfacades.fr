@@ -1,815 +1,410 @@
 export const blogCategories = [
-  { id: 'tous', name: 'Tous les Articles', slug: 'tous' },
-  { id: 'prix', name: 'Guide des Prix', slug: 'prix' },
-  { id: 'conseils', name: 'Conseils Techniques', slug: 'conseils' },
-  { id: 'aides', name: 'Aides Financières', slug: 'aides' },
-  { id: 'reglementation', name: 'Réglementation', slug: 'reglementation' },
-  { id: 'entretien', name: 'Entretien', slug: 'entretien' },
+  { id: 'tous', name: 'Tous' },
+  { id: 'construction', name: 'Construction' },
+  { id: 'enduit', name: 'Enduit' },
+  { id: 'gouttiere', name: 'Gouttière' },
+  { id: 'isolation', name: 'Isolation' },
+  { id: 'renovation', name: 'Rénovation' },
 ]
 
 export const blogArticles = [
   {
     id: 1,
-    slug: 'prix-ravalement-facade-2025-guide-complet',
-    title: 'Prix Ravalement Façade 2025 : Guide Complet des Tarifs',
-    excerpt: 'Découvrez les prix moyens du ravalement de façade en 2025. Tarifs au m², facteurs de prix, et conseils pour maîtriser votre budget.',
-    category: 'prix',
-    image: '/images/projects/projet-01-ravalement-immeuble-pierre/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2025-01-15',
+    slug: 'construction-neuf-facade-guide',
+    title: 'Guide complet : Façade pour construction neuve',
+    excerpt: 'Tout ce qu\'il faut savoir pour réussir la façade de votre maison neuve. Choix des enduits, techniques d\'application et conseils de professionnels.',
+    image: '/images/projects/construction-neuf/05.jpg',
+    category: 'construction',
+    date: '2026-03-15',
     readTime: '8 min',
+    author: 'Cakir Facades',
     featured: true,
-    content: `
-## Combien coûte un ravalement de façade en 2025 ?
+    tags: ['construction neuve', 'enduit', 'façade', 'maison neuve'],
+    relatedServices: [],
+    content: `## Pourquoi la façade est essentielle dans une construction neuve ?
 
-Le ravalement de façade est un investissement important pour votre habitation. En 2025, les prix varient considérablement selon plusieurs facteurs. Voici notre guide complet pour vous aider à estimer votre budget.
+La façade est bien plus qu'un simple élément esthétique. Elle constitue la **première barrière de protection** de votre maison contre les intempéries, l'humidité et les variations de température. Dans le cadre d'une construction neuve, le choix de l'enduit et la qualité de la mise en œuvre sont déterminants pour la durabilité de votre habitation.
 
-### Prix moyens au m²
+## Les différents types d'enduits pour construction neuve
 
-| Type de ravalement | Prix au m² (HT) |
-|-------------------|-----------------|
-| Nettoyage simple | 15€ - 30€ |
-| Ravalement avec peinture | 30€ - 60€ |
-| Ravalement avec enduit | 50€ - 90€ |
-| Ravalement complet (réparations + finitions) | 80€ - 150€ |
+### Enduit monocouche
 
-### Facteurs influençant le prix
+L'enduit monocouche est la solution la plus courante en construction neuve. Il s'applique en **une seule passe** et assure à la fois l'imperméabilisation et la finition décorative de la façade.
 
-**1. L'état de la façade**
-Une façade très dégradée nécessitera plus de travaux préparatoires (réparation de fissures, traitement de l'humidité), ce qui augmente le coût final.
+- Application rapide et économique
+- Large choix de coloris et de finitions
+- Bonne résistance aux intempéries
+- Adapté à tous les types de supports
 
-**2. La surface à traiter**
-Plus la surface est importante, plus le prix au m² peut être dégressif. Une façade de 100m² coûtera proportionnellement moins cher qu'une façade de 50m².
+### Enduit traditionnel (multicouche)
 
-**3. L'accessibilité du chantier**
-Un échafaudage complexe ou un accès difficile peuvent augmenter significativement le devis.
+L'enduit traditionnel, appliqué en **deux ou trois couches**, offre une qualité de finition supérieure. Il permet un travail plus fin et des rendus plus personnalisés.
 
-**4. Le type de finition choisi**
-- Peinture simple : économique
-- Enduit taloché : prix moyen
-- Enduit décoratif imitation pierre : prix premium
+- Finition haut de gamme
+- Meilleure adhérence au support
+- Possibilité de finitions variées (grattée, talochée, ribbée)
+- Durabilité exceptionnelle
 
-**5. La région**
-Les prix varient selon les régions. En Loire-Atlantique, comptez en moyenne 60€ à 100€/m² pour un ravalement complet.
+## Les étapes d'une mise en œuvre réussie
 
-### Comment réduire le coût ?
+### 1. Préparation du support
 
-1. **Comparez plusieurs devis** : Demandez au moins 3 devis détaillés
-2. **Profitez des aides** : MaPrimeRénov', CEE, éco-PTZ (si isolation)
-3. **Anticipez les travaux** : Une façade entretenue coûte moins cher à rénover
-4. **Groupez les travaux** : Isolation + ravalement = économies d'échelle
+Avant toute application, le support doit être **propre, sec et stable**. Sur une construction neuve, il faut respecter un temps de séchage suffisant des murs en parpaings ou en briques.
 
-### Notre conseil
+### 2. Application du gobetis
 
-Chez Cakir Facades, nous proposons des devis gratuits et détaillés. Nous vous conseillons sur les meilleures solutions adaptées à votre budget et à vos besoins.
-    `,
-    tags: ['prix', 'ravalement', 'budget', 'devis'],
-    relatedServices: ['ravalement-de-facades'],
+Le gobetis est une couche d'accrochage projetée sur le mur. Elle assure une **adhérence optimale** de l'enduit de finition.
+
+### 3. Corps d'enduit
+
+Le corps d'enduit vient régulariser la surface et apporter l'épaisseur nécessaire à la protection du mur.
+
+### 4. Finition
+
+La finition détermine l'aspect final de votre façade. Chez Cakir Facades, nous proposons plusieurs rendus :
+
+- **Grattée** : aspect régulier et contemporain
+- **Talochée** : surface lisse et élégante
+- **Ribbée** : effet strié décoratif
+- **Écrasée** : rendu rustique et authentique
+
+## Nos conseils pour votre projet
+
+**Choisissez des teintes claires** pour les façades exposées au sud. Elles résistent mieux aux UV et conservent leur éclat plus longtemps.
+
+**Pensez aux détails** : encadrements de fenêtres, soubassements et corniches apportent du caractère à votre façade.
+
+**Faites appel à un professionnel**. La mise en œuvre d'un enduit de façade requiert un savoir-faire artisanal et des équipements spécifiques. Chez Cakir Facades, nous intervenons sur tout le Grand Ouest depuis Châteaubriant.`
   },
   {
     id: 2,
-    slug: 'aides-ravalement-facade-2025-maprimerénov-cee',
-    title: 'Aides Ravalement Façade 2025 : MaPrimeRénov\', CEE et Éco-PTZ',
-    excerpt: 'Toutes les aides financières disponibles en 2025 pour votre ravalement de façade. Conditions, montants et démarches expliquées.',
-    category: 'aides',
-    image: '/images/projects/projet-08-isolation-ite/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2025-01-10',
-    readTime: '10 min',
+    slug: 'enduit-imitation-pierre-avantages',
+    title: 'Enduit imitation pierre : avantages et techniques',
+    excerpt: 'Découvrez comment l\'enduit imitation pierre peut transformer votre façade avec un rendu authentique à moindre coût. Techniques, avantages et réalisations.',
+    image: '/images/projects/enduit-imitation-pierre/03.jpg',
+    category: 'enduit',
+    date: '2026-03-10',
+    readTime: '7 min',
+    author: 'Cakir Facades',
     featured: true,
-    content: `
-## Les aides pour financer votre ravalement en 2025
+    tags: ['enduit imitation pierre', 'décoration façade', 'pierre de taille', 'artisanat'],
+    relatedServices: [],
+    content: `## Qu'est-ce que l'enduit imitation pierre ?
 
-Bonne nouvelle : plusieurs dispositifs d'aide peuvent réduire significativement le coût de vos travaux de façade, notamment si vous y associez une isolation thermique.
+L'enduit imitation pierre est une **technique artisanale** qui consiste à sculpter l'enduit frais pour reproduire l'aspect de la pierre de taille. Le résultat est bluffant : votre façade prend l'apparence d'un mur en pierres apparentes, avec des joints creusés à la main et des teintes naturelles.
 
-### MaPrimeRénov' 2025
+## Les avantages de l'enduit imitation pierre
 
-MaPrimeRénov' est la principale aide de l'État pour la rénovation énergétique. Elle concerne principalement les travaux d'isolation.
+### Un rendu authentique
 
-**Montants pour l'ITE (Isolation Thermique par l'Extérieur) :**
-- Ménages très modestes : jusqu'à 75€/m²
-- Ménages modestes : jusqu'à 60€/m²
-- Ménages intermédiaires : jusqu'à 40€/m²
-- Ménages aisés : jusqu'à 15€/m²
+La technique permet de reproduire fidèlement l'aspect de différents types de pierres :
 
-**Conditions :**
-- Logement de plus de 15 ans
-- Travaux réalisés par un artisan RGE
-- Résidence principale
+- **Pierre de taille** : blocs réguliers et joints fins
+- **Moellons** : pierres irrégulières pour un effet rustique
+- **Pierre sèche** : assemblage naturel sans joint apparent
 
-### Certificats d'Économies d'Énergie (CEE)
+### Un coût maîtrisé
 
-Les CEE sont des primes versées par les fournisseurs d'énergie. Elles sont cumulables avec MaPrimeRénov'.
+Comparé à un parement en vraie pierre, l'enduit imitation pierre offre un **rapport qualité-prix imbattable**. Vous bénéficiez du même rendu visuel pour un budget nettement inférieur.
 
-**Montants moyens pour l'ITE :**
-- Entre 10€ et 25€/m² selon les revenus
-- Bonus pour les passoires thermiques
+### Une protection efficace
 
-### Éco-PTZ (Prêt à Taux Zéro)
+Au-delà de l'esthétique, l'enduit imitation pierre assure une **protection complète** de votre façade contre l'humidité, le gel et les variations thermiques.
 
-L'éco-PTZ permet de financer le reste à charge sans intérêts.
+### Une personnalisation totale
 
-**Caractéristiques :**
-- Jusqu'à 50 000€ pour un bouquet de travaux
-- Durée de remboursement jusqu'à 20 ans
-- Sans conditions de ressources
+Chaque réalisation est unique. Le façadier peut adapter :
 
-### TVA réduite à 5,5%
+- La taille et la forme des pierres
+- La profondeur et le style des joints
+- Les teintes et nuances de couleur
+- Le vieillissement artificiel pour un effet ancien
 
-Pour les travaux d'amélioration énergétique, la TVA est réduite à 5,5% au lieu de 10%.
+## Le processus de réalisation
 
-### Aides locales
+### Étape 1 : Préparation
 
-N'oubliez pas les aides des collectivités locales :
-- Région Pays de la Loire
-- Département Loire-Atlantique
-- Communes (Châteaubriant, Nantes, etc.)
+Le mur est nettoyé et préparé. Un enduit de base est appliqué pour créer une surface homogène.
 
-### Comment en bénéficier ?
+### Étape 2 : Application de l'enduit
 
-1. **Faites réaliser un audit énergétique** (recommandé)
-2. **Demandez plusieurs devis** à des artisans RGE
-3. **Déposez vos demandes d'aides** avant le début des travaux
-4. **Faites réaliser les travaux** par un professionnel qualifié
-5. **Conservez toutes les factures** pour vos déclarations
+Un enduit spécifique est projeté en épaisseur suffisante pour permettre le travail de sculpture.
 
-### Notre accompagnement
+### Étape 3 : Traçage des joints
 
-Chez Cakir Facades, nous vous accompagnons dans vos démarches administratives et vous aidons à maximiser vos aides.
-    `,
-    tags: ['aides', 'MaPrimeRénov', 'CEE', 'éco-PTZ', 'financement'],
-    relatedServices: ['isolation-exterieure'],
+Le façadier trace les joints à la main dans l'enduit encore frais, en suivant un calepinage préétabli. C'est l'étape la plus délicate, qui demande un **véritable savoir-faire artisanal**.
+
+### Étape 4 : Sculpture et finition
+
+Chaque « pierre » est travaillée individuellement pour lui donner du relief et un aspect naturel. Les joints sont creusés et lissés.
+
+### Étape 5 : Mise en teinte
+
+Les teintes sont appliquées pour donner de la profondeur et du réalisme. Plusieurs nuances sont souvent utilisées pour un rendu naturel.
+
+## Où utiliser l'enduit imitation pierre ?
+
+- **Façades complètes** : transformation totale de votre maison
+- **Soubassements** : mise en valeur de la base de la façade
+- **Encadrements** : fenêtres et portes soulignées en pierre
+- **Murets et piliers** : aménagements extérieurs harmonieux
+- **Cheminées** : décoration intérieure ou extérieure
+
+## Pourquoi choisir Cakir Facades ?
+
+Notre équipe maîtrise parfaitement la technique de l'enduit imitation pierre. Chaque projet est réalisé avec **passion et minutie**, pour un résultat qui dépasse vos attentes. Consultez nos réalisations pour découvrir notre savoir-faire.`
   },
   {
     id: 3,
-    slug: 'enduit-facade-chaux-ciment-synthetique-comparatif',
-    title: 'Enduit Façade : Chaux, Ciment ou Synthétique ? Le Comparatif',
-    excerpt: 'Quel enduit choisir pour votre façade ? Avantages, inconvénients et prix des différents types d\'enduits expliqués par nos experts.',
-    category: 'conseils',
-    image: '/images/projects/projet-02-enduit-pierre-gris-cloture/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2025-01-05',
-    readTime: '7 min',
+    slug: 'gouttiere-aluminium-pourquoi-choisir',
+    title: 'Pourquoi choisir des gouttières en aluminium ?',
+    excerpt: 'Les gouttières en aluminium offrent durabilité, esthétique et facilité d\'entretien. Découvrez tous les avantages de ce matériau pour votre habitation.',
+    image: '/images/projects/gouttiere-aluminium/01.jpg',
+    category: 'gouttiere',
+    date: '2026-03-05',
+    readTime: '5 min',
+    author: 'Cakir Facades',
     featured: false,
-    content: `
-## Choisir le bon enduit pour sa façade
+    tags: ['gouttière', 'aluminium', 'évacuation eaux', 'toiture'],
+    relatedServices: [],
+    content: `## L'aluminium : le matériau idéal pour vos gouttières
 
-Le choix de l'enduit est crucial pour l'esthétique et la durabilité de votre façade. Voici un comparatif détaillé des trois grandes familles d'enduits.
+Les gouttières jouent un rôle essentiel dans la protection de votre maison contre les eaux pluviales. Le choix du matériau est donc crucial. L'aluminium s'impose comme la **solution la plus performante** du marché, combinant durabilité, esthétique et facilité d'entretien.
 
-### Enduit à la chaux
+## Les avantages des gouttières en aluminium
 
-**Avantages :**
-- Excellent pour les bâtis anciens (pierre, brique)
-- Laisse respirer les murs
-- Aspect authentique et chaleureux
-- Régulation naturelle de l'humidité
-- Écologique et durable
+### Durabilité exceptionnelle
 
-**Inconvénients :**
-- Temps de séchage plus long
-- Application plus technique
-- Prix plus élevé
+L'aluminium est un matériau qui **ne rouille pas**. Contrairement au zinc ou à l'acier, il résiste naturellement à la corrosion. Une gouttière en aluminium a une durée de vie de **30 à 50 ans** sans entretien particulier.
 
-**Prix moyen :** 50€ à 80€/m²
+### Légèreté et résistance
 
-**Idéal pour :** Maisons anciennes, bâtiments historiques, construction écologique
+Malgré sa légèreté, l'aluminium offre une excellente résistance mécanique. Il supporte les charges de neige et les vents violents sans se déformer.
 
-### Enduit au ciment
+### Esthétique sur mesure
 
-**Avantages :**
-- Très résistant mécaniquement
-- Séchage rapide
-- Bon rapport qualité/prix
-- Facile à appliquer
+Les gouttières en aluminium sont fabriquées sur mesure et **laquées dans la couleur de votre choix**. Elles s'intègrent parfaitement à l'architecture de votre maison.
 
-**Inconvénients :**
-- Ne laisse pas respirer les murs
-- Peut fissurer avec le temps
-- Aspect plus industriel
+- Plus de 200 coloris RAL disponibles
+- Finition laquée brillante ou mate
+- Profils variés (demi-ronde, carrée, moulurée)
 
-**Prix moyen :** 40€ à 60€/m²
+### Pose sans soudure
 
-**Idéal pour :** Constructions neuves en parpaing, murs béton
+Les gouttières en aluminium sont **formées en continu** directement sur le chantier. Résultat : aucun raccord visible, une étanchéité parfaite et un rendu impeccable.
 
-### Enduit synthétique (monocouche)
+### Entretien minimal
 
-**Avantages :**
-- Application en une seule couche
-- Large choix de couleurs
-- Résistant aux intempéries
-- Entretien facile
+Un simple nettoyage à l'eau claire une fois par an suffit pour conserver l'aspect neuf de vos gouttières en aluminium.
 
-**Inconvénients :**
-- Moins respirant
-- Aspect parfois moins naturel
-- Durée de vie plus limitée
+## Aluminium vs autres matériaux
 
-**Prix moyen :** 35€ à 55€/m²
+### Aluminium vs PVC
 
-**Idéal pour :** Rénovation rapide, budget maîtrisé
+Le PVC est moins cher à l'achat, mais il **jaunit et se fragilise** avec le temps. L'aluminium conserve son aspect et sa résistance pendant des décennies.
 
-### Tableau comparatif
+### Aluminium vs Zinc
 
-| Critère | Chaux | Ciment | Synthétique |
-|---------|-------|--------|-------------|
-| Respirabilité | ★★★★★ | ★★☆☆☆ | ★★★☆☆ |
-| Durabilité | ★★★★★ | ★★★★☆ | ★★★☆☆ |
-| Esthétique | ★★★★★ | ★★★☆☆ | ★★★★☆ |
-| Prix | ★★☆☆☆ | ★★★★☆ | ★★★★★ |
-| Facilité pose | ★★★☆☆ | ★★★★☆ | ★★★★★ |
+Le zinc est un matériau traditionnel, mais il est **plus sensible à la corrosion** en environnement salin ou pollué. L'aluminium offre une meilleure longévité.
 
-### Notre recommandation
+## Notre prestation gouttières
 
-Le choix dépend de votre situation. Chez Cakir Facades, nous analysons votre bâti et vos attentes pour vous recommander la meilleure solution.
-    `,
-    tags: ['enduit', 'chaux', 'ciment', 'comparatif', 'matériaux'],
-    relatedServices: ['enduit-de-facade'],
+Chez Cakir Facades, nous réalisons la **pose complète** de vos gouttières en aluminium :
+
+- Dépose de l'ancienne gouttière
+- Fabrication sur mesure sur le chantier
+- Pose avec supports adaptés
+- Raccordement aux descentes
+- Nettoyage du chantier
+
+Contactez-nous pour un devis gratuit et personnalisé.`
   },
   {
     id: 4,
-    slug: 'isolation-thermique-exterieure-ite-guide-complet',
-    title: 'ITE : Guide Complet de l\'Isolation Thermique par l\'Extérieur',
-    excerpt: 'Tout savoir sur l\'isolation thermique par l\'extérieur : techniques, matériaux, avantages et retour sur investissement.',
-    category: 'conseils',
-    image: '/images/projects/projet-08-isolation-ite/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2024-12-20',
-    readTime: '12 min',
+    slug: 'isolation-exterieure-economies-energie',
+    title: 'Isolation extérieure : économies d\'énergie garanties',
+    excerpt: 'L\'isolation thermique par l\'extérieur (ITE) permet de réduire jusqu\'à 30% vos factures de chauffage. Guide complet sur les techniques, matériaux et aides financières.',
+    image: '/images/projects/isolant-exterieur/02.jpg',
+    category: 'isolation',
+    date: '2026-02-28',
+    readTime: '9 min',
+    author: 'Cakir Facades',
     featured: true,
-    content: `
-## L'Isolation Thermique par l'Extérieur expliquée
+    tags: ['isolation extérieure', 'ITE', 'économies énergie', 'rénovation énergétique'],
+    relatedServices: [],
+    content: `## Qu'est-ce que l'isolation thermique par l'extérieur ?
 
-L'ITE est la solution la plus efficace pour améliorer la performance énergétique de votre habitation. Voici tout ce que vous devez savoir.
+L'isolation thermique par l'extérieur (ITE) consiste à envelopper votre maison d'un **manteau isolant**, puis à le recouvrir d'un enduit de finition. Cette technique supprime les ponts thermiques et améliore considérablement le confort de votre habitation.
 
-### Qu'est-ce que l'ITE ?
+## Les avantages de l'ITE
 
-L'Isolation Thermique par l'Extérieur consiste à envelopper votre bâtiment d'un manteau isolant, recouvert d'un enduit de finition. Cette technique supprime les ponts thermiques et préserve votre surface habitable.
+### Économies d'énergie significatives
 
-### Les différentes techniques
+L'ITE permet de réduire les déperditions thermiques par les murs de **20 à 30%**. Concrètement, cela représente une économie de plusieurs centaines d'euros par an sur votre facture de chauffage.
 
-**1. ITE sous enduit**
-- Isolant collé et/ou chevillé
-- Armature en fibre de verre
-- Enduit de finition au choix
-- La plus courante en résidentiel
+### Confort thermique été comme hiver
 
-**2. ITE sous bardage**
-- Isolant sur ossature
-- Pare-pluie
-- Bardage (bois, composite, métallique)
-- Aspect moderne
+En hiver, l'isolation empêche la chaleur de s'échapper. En été, elle protège votre intérieur de la chaleur extérieure. Vous gagnez en **confort toute l'année**.
 
-### Les matériaux isolants
+### Pas de perte de surface habitable
 
-| Matériau | Performance (λ) | Épaisseur 100mm | Prix/m² |
-|----------|-----------------|-----------------|---------|
-| Polystyrène expansé (PSE) | 0.038 | R = 2.63 | 15-25€ |
-| Polystyrène graphité | 0.032 | R = 3.12 | 20-30€ |
-| Laine de roche | 0.035 | R = 2.85 | 25-40€ |
-| Fibre de bois | 0.038 | R = 2.63 | 35-50€ |
+Contrairement à l'isolation par l'intérieur, l'ITE ne réduit pas la surface de vos pièces. L'isolant est posé **à l'extérieur du bâtiment**.
 
-### Avantages de l'ITE
+### Rénovation de la façade
 
-1. **Économies d'énergie** : jusqu'à 25% sur la facture de chauffage
-2. **Confort thermique** : température homogène, été comme hiver
-3. **Pas de perte de surface** : l'isolation est à l'extérieur
-4. **Suppression des ponts thermiques** : plus de murs froids
-5. **Ravalement inclus** : façade neuve après travaux
-6. **Valorisation du bien** : meilleur DPE
+L'ITE est l'occasion de **rénover l'aspect de votre façade**. Vous bénéficiez d'une finition neuve avec un large choix d'enduits et de coloris.
 
-### Retour sur investissement
+### Suppression des ponts thermiques
 
-Pour une maison de 100m² de façade :
-- Coût moyen : 15 000€ à 25 000€
-- Aides : jusqu'à 10 000€
-- Reste à charge : 5 000€ à 15 000€
-- Économies annuelles : 500€ à 1 000€
-- Retour sur investissement : 5 à 15 ans
+Les ponts thermiques (jonctions murs/planchers, encadrements de fenêtres) sont les points faibles de l'isolation. L'ITE les **supprime totalement** en enveloppant le bâtiment de manière continue.
 
-### Notre expertise
+## Les matériaux isolants
 
-Chez Cakir Facades, nous maîtrisons toutes les techniques d'ITE. Nous vous conseillons sur le meilleur rapport performance/prix.
-    `,
-    tags: ['ITE', 'isolation', 'énergie', 'économies', 'rénovation'],
-    relatedServices: ['isolation-exterieure'],
+### Polystyrène expansé (PSE)
+
+Le polystyrène expansé est l'isolant le plus utilisé en ITE :
+
+- **Excellent rapport performance/prix**
+- Léger et facile à poser
+- Bonne résistance à l'humidité
+- Épaisseur courante : 12 à 20 cm
+
+### Laine de roche
+
+La laine de roche offre des performances thermiques et acoustiques :
+
+- **Incombustible** (classement A1)
+- Excellent isolant phonique
+- Perméable à la vapeur d'eau
+- Idéale pour les ERP et bâtiments collectifs
+
+## Les étapes de la mise en œuvre
+
+### 1. Diagnostic et préparation
+
+Le support est inspecté et préparé. Les éventuels désordres (fissures, humidité) sont traités avant la pose de l'isolant.
+
+### 2. Pose de l'isolant
+
+Les panneaux isolants sont collés et/ou chevillés sur la façade. Chaque panneau est soigneusement ajusté pour garantir la continuité de l'isolation.
+
+### 3. Marouflage du treillis
+
+Un treillis de fibre de verre est noyé dans un sous-enduit. Il renforce le système et prévient les fissurations.
+
+### 4. Enduit de finition
+
+L'enduit de finition est appliqué pour donner l'aspect final à votre façade. Vous avez le choix parmi de nombreux coloris et textures.
+
+## Les aides financières
+
+L'ITE est éligible à de nombreuses aides :
+
+- **MaPrimeRénov'** : jusqu'à 75 €/m² selon vos revenus
+- **CEE (Certificats d'Économie d'Énergie)** : prime complémentaire
+- **Éco-PTZ** : prêt à taux zéro jusqu'à 50 000 €
+- **TVA réduite à 5,5%** pour les travaux de rénovation énergétique
+
+## Confiez votre ITE à Cakir Facades
+
+Notre équipe est spécialisée dans la pose d'isolation thermique par l'extérieur. Nous vous accompagnons de A à Z : **diagnostic, choix des matériaux, mise en œuvre et finition**. Demandez votre devis gratuit dès aujourd'hui.`
   },
   {
     id: 5,
-    slug: 'declaration-prealable-ravalement-facade-guide',
-    title: 'Déclaration Préalable de Ravalement : Guide Pratique',
-    excerpt: 'Faut-il une autorisation pour ravaler sa façade ? Découvrez les démarches administratives et les délais à respecter.',
-    category: 'reglementation',
-    image: '/images/projects/projet-01-ravalement-immeuble-pierre/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2024-12-15',
-    readTime: '6 min',
-    featured: false,
-    content: `
-## Faut-il une autorisation pour ravaler sa façade ?
-
-Dans la plupart des cas, oui. Le ravalement de façade modifie l'aspect extérieur de votre habitation et nécessite une déclaration préalable de travaux.
-
-### Quand faut-il une déclaration préalable ?
-
-**Obligatoire si :**
-- Changement de couleur de la façade
-- Changement de matériau ou de revêtement
-- Modification de l'aspect extérieur
-- Commune avec PLU ou règlement local
-
-**Non obligatoire si :**
-- Simple nettoyage sans modification
-- Réparations à l'identique (même couleur, même matériau)
-- Certaines communes sans réglementation spécifique
-
-### Comment faire sa déclaration ?
-
-**1. Téléchargez le formulaire CERFA n°13703*08**
-Disponible sur service-public.fr ou en mairie.
-
-**2. Constituez votre dossier :**
-- Plan de situation
-- Plan de masse
-- Photos de l'existant
-- Document graphique (état projeté)
-- Notice descriptive des travaux
-
-**3. Déposez en mairie**
-En main propre ou par lettre recommandée avec AR.
-
-**4. Attendez la réponse**
-- Délai d'instruction : 1 mois
-- Absence de réponse = accord tacite
-- Affichage obligatoire sur le terrain
-
-### Les délais à respecter
-
-| Étape | Délai |
-|-------|-------|
-| Instruction | 1 mois |
-| Validité de l'autorisation | 3 ans |
-| Affichage sur le terrain | Pendant toute la durée des travaux |
-| Recours des tiers | 2 mois après affichage |
-
-### Cas particuliers
-
-**Secteur protégé (ABF) :**
-- Délai d'instruction : 2 mois
-- Avis de l'Architecte des Bâtiments de France
-- Contraintes sur les couleurs et matériaux
-
-**Copropriété :**
-- Accord de l'assemblée générale nécessaire
-- Déclaration au nom du syndic
-
-### Notre accompagnement
-
-Cakir Facades vous aide dans vos démarches administratives. Nous connaissons les réglementations locales et pouvons vous fournir les documents nécessaires.
-    `,
-    tags: ['déclaration', 'autorisation', 'mairie', 'réglementation', 'CERFA'],
-    relatedServices: ['ravalement-de-facades'],
-  },
-  {
-    id: 6,
-    slug: 'garantie-decennale-facade-droits-recours',
-    title: 'Garantie Décennale Façade : Vos Droits et Recours',
-    excerpt: 'Tout comprendre sur la garantie décennale pour les travaux de façade. Couverture, durée, et comment faire jouer vos droits.',
-    category: 'reglementation',
-    image: '/images/projects/projet-12-neuf-beige/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2024-12-10',
+    slug: 'renovation-facade-guide-pratique',
+    title: 'Rénovation de façade : guide pratique complet',
+    excerpt: 'Votre façade montre des signes de vieillissement ? Découvrez les étapes d\'une rénovation réussie, du diagnostic au ravalement complet.',
+    image: '/images/projects/renovation/04.jpg',
+    category: 'renovation',
+    date: '2026-02-20',
     readTime: '7 min',
+    author: 'Cakir Facades',
     featured: false,
-    content: `
-## La garantie décennale : protection essentielle
+    tags: ['rénovation', 'ravalement', 'façade', 'joints de pierre', 'entretien'],
+    relatedServices: [],
+    content: `## Quand faut-il rénover sa façade ?
 
-La garantie décennale est une assurance obligatoire qui vous protège pendant 10 ans après la réception des travaux.
+La façade de votre maison est exposée en permanence aux agressions extérieures. Avec le temps, des signes de dégradation apparaissent. Voici les **signaux d'alerte** qui doivent vous inciter à agir :
 
-### Qu'est-ce que la garantie décennale ?
+- **Fissures** visibles sur l'enduit
+- **Décollements** ou écaillages de peinture
+- **Traces d'humidité** ou de mousse
+- **Décoloration** importante des teintes
+- **Joints dégradés** sur les murs en pierre
 
-C'est une garantie légale (loi Spinetta de 1978) qui couvre les dommages compromettant la solidité de l'ouvrage ou le rendant impropre à sa destination.
+## Les étapes d'une rénovation de façade
 
-### Ce qui est couvert pour les façades
+### 1. Le diagnostic
 
-**Dommages couverts :**
-- Décollement important de l'enduit
-- Infiltrations d'eau par la façade
-- Fissures traversantes
-- Défaut d'isolation thermique majeur
-- Problèmes d'étanchéité
+Avant tout travail, un diagnostic approfondi est réalisé. Il permet d'identifier :
 
-**Dommages NON couverts :**
-- Microfissures esthétiques
-- Défauts mineurs d'aspect
-- Usure normale
-- Dommages dus à un défaut d'entretien
-- Modifications faites par le propriétaire
+- L'état du support (parpaing, brique, pierre)
+- La nature et l'étendue des désordres
+- Les causes des dégradations (humidité, mouvement de structure, vieillissement)
+- Les solutions adaptées
 
-### Les autres garanties
+### 2. Le nettoyage
 
-**Garantie de parfait achèvement (1 an) :**
-- Tous les désordres signalés à la réception
-- Ou apparaissant dans l'année suivant la réception
+Le nettoyage est la première étape du ravalement. Selon l'état de la façade, plusieurs techniques sont utilisées :
 
-**Garantie biennale (2 ans) :**
-- Éléments d'équipement dissociables
-- Volets, stores, éclairages extérieurs
+- **Nettoyage haute pression** : élimination des salissures, mousses et lichens
+- **Sablage** : décapage des enduits dégradés et des peintures
+- **Gommage** : nettoyage doux adapté aux pierres fragiles
 
-### Comment faire jouer la garantie ?
+### 3. Le traitement des fissures
 
-**1. Constatez le dommage**
-Prenez des photos, notez la date d'apparition.
+Les fissures sont traitées en fonction de leur type :
 
-**2. Contactez l'entreprise**
-Envoyez une lettre recommandée avec AR décrivant le problème.
-
-**3. Déclarez le sinistre**
-À votre assurance dommages-ouvrage si vous en avez une.
-
-**4. Faites constater par un expert**
-En cas de désaccord ou de non-réponse.
-
-**5. Engagez les recours**
-Mise en demeure, médiation, tribunal si nécessaire.
-
-### Notre engagement
-
-Cakir Facades dispose d'une assurance décennale à jour. Nous vous remettons une attestation avec chaque devis. Votre tranquillité est notre priorité.
-    `,
-    tags: ['garantie', 'décennale', 'assurance', 'droits', 'protection'],
-    relatedServices: ['ravalement-de-facades', 'enduit-de-facade'],
-  },
-  {
-    id: 7,
-    slug: 'entretien-facade-conseils-saisonniers',
-    title: 'Entretien de Façade : Conseils Saisonniers',
-    excerpt: 'Comment entretenir sa façade tout au long de l\'année ? Nos conseils pratiques saison par saison pour préserver votre façade.',
-    category: 'entretien',
-    image: '/images/projects/projet-02-enduit-pierre-gris-cloture/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2024-12-05',
-    readTime: '5 min',
-    featured: false,
-    content: `
-## Entretenir sa façade au fil des saisons
-
-Un entretien régulier prolonge la durée de vie de votre façade et retarde le besoin d'un ravalement complet.
-
-### Printemps : le grand nettoyage
-
-**Actions recommandées :**
-- Inspection visuelle complète
-- Nettoyage des traces d'humidité hivernales
-- Traitement anti-mousse si nécessaire
-- Vérification des joints et fissures
-- Nettoyage des gouttières et descentes
-
-**Astuce :** Le printemps est idéal pour programmer un ravalement, les conditions météo sont favorables.
-
-### Été : surveillance et petites réparations
-
-**Actions recommandées :**
-- Surveillance des fissures (la chaleur peut les agrandir)
-- Rebouchage des petites fissures
-- Nettoyage des traces de pollution
-- Vérification de l'étanchéité des fenêtres
-
-**Attention :** Évitez les travaux d'enduit par forte chaleur (> 30°C).
-
-### Automne : préparation à l'hiver
-
-**Actions recommandées :**
-- Nettoyage des mousses et lichens
-- Vérification de l'évacuation des eaux
-- Traitement hydrofuge préventif
-- Réparation des fissures avant le gel
-
-**Astuce :** Un traitement hydrofuge avant l'hiver protège contre le gel.
-
-### Hiver : surveillance uniquement
-
-**Actions recommandées :**
-- Surveillance après chaque épisode de gel
-- Vérification des descentes d'eau (gel)
-- Report des travaux au printemps
-
-**Attention :** Pas de travaux d'enduit par temps de gel !
-
-### Fréquence d'entretien recommandée
-
-| Action | Fréquence |
-|--------|-----------|
-| Inspection visuelle | 2 fois/an |
-| Nettoyage léger | 1 fois/an |
-| Traitement anti-mousse | Tous les 2-3 ans |
-| Traitement hydrofuge | Tous les 5-10 ans |
-| Ravalement complet | Tous les 10-15 ans |
-
-### Quand faire appel à un professionnel ?
-
-- Fissures qui s'agrandissent
-- Décollements d'enduit
-- Traces d'humidité persistantes
-- Mousses importantes
-- Préparation du ravalement
-
-Contactez Cakir Facades pour un diagnostic gratuit de votre façade.
-    `,
-    tags: ['entretien', 'nettoyage', 'saisonnier', 'prévention', 'conseils'],
-    relatedServices: ['ravalement-de-facades'],
-  },
-  {
-    id: 8,
-    slug: 'fissures-facade-diagnostic-solutions',
-    title: 'Fissures de Façade : Diagnostic et Solutions',
-    excerpt: 'Comment identifier et traiter les fissures de façade ? Types de fissures, causes et solutions adaptées par nos experts.',
-    category: 'conseils',
-    image: '/images/projects/projet-01-ravalement-immeuble-pierre/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2024-11-25',
-    readTime: '8 min',
-    featured: false,
-    content: `
-## Comprendre et traiter les fissures de façade
-
-Les fissures sont le problème le plus fréquent sur les façades. Leur traitement dépend de leur type et de leur cause.
-
-### Types de fissures
-
-**1. Microfissures (< 0,2 mm)**
-- Aspect : fines lignes à peine visibles
-- Cause : retrait normal de l'enduit
-- Gravité : faible
-- Traitement : peinture souple ou revêtement d'imperméabilisation
-
-**2. Fissures légères (0,2 à 2 mm)**
-- Aspect : lignes visibles mais peu profondes
-- Cause : mouvements thermiques, vieillissement
-- Gravité : moyenne
-- Traitement : rebouchage + revêtement
-
-**3. Fissures importantes (> 2 mm)**
-- Aspect : ouvertures nettes, parfois profondes
-- Cause : mouvements structurels, défaut de construction
-- Gravité : élevée
-- Traitement : diagnostic structurel + réparation en profondeur
-
-### Causes principales
-
-**Causes superficielles :**
-- Retrait de l'enduit au séchage
-- Dilatation thermique
-- Vieillissement naturel
-- Choc ou impact
-
-**Causes structurelles :**
-- Tassement différentiel des fondations
-- Mouvements de terrain
-- Défaut de conception
-- Surcharge de la structure
-
-### Comment diagnostiquer ?
-
-**1. Observer l'évolution**
-Posez un témoin en plâtre sur la fissure. S'il se fissure à son tour, la fissure est évolutive.
-
-**2. Mesurer la largeur**
-Utilisez une jauge ou une feuille de papier (0,1 mm d'épaisseur).
-
-**3. Analyser le tracé**
-- Verticale : tassement
-- Horizontale : poussée latérale
-- En escalier : mouvements différentiels
-- En étoile : impact ponctuel
-
-### Solutions de traitement
-
-**Pour microfissures :**
-1. Nettoyage de la fissure
-2. Application d'un fixateur
-3. Peinture élastique ou revêtement souple
-
-**Pour fissures moyennes :**
-1. Ouverture en V de la fissure
-2. Nettoyage et dépoussiérage
-3. Application d'un primaire
-4. Rebouchage au mastic souple
-5. Armature (calicot ou fibre de verre)
-6. Enduit de finition
-
-**Pour fissures importantes :**
-1. Diagnostic par un expert
-2. Traitement de la cause (reprise en sous-œuvre si nécessaire)
-3. Agrafage ou injection selon le cas
-4. Réfection complète de l'enduit
-
-### Notre expertise
-
-Cakir Facades réalise un diagnostic précis de vos fissures et vous propose le traitement adapté, avec garantie décennale.
-    `,
-    tags: ['fissures', 'diagnostic', 'réparation', 'traitement', 'pathologies'],
-    relatedServices: ['ravalement-de-facades'],
-  },
-  {
-    id: 9,
-    slug: 'ravalement-facade-chateaubriant-specificites-locales',
-    title: 'Ravalement de Façade à Châteaubriant : Spécificités Locales',
-    excerpt: 'Les particularités du ravalement de façade à Châteaubriant et en Loire-Atlantique : climat, architecture locale et réglementations.',
-    category: 'conseils',
-    image: '/images/projects/projet-02-enduit-pierre-gris-cloture/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2024-11-15',
-    readTime: '6 min',
-    featured: false,
-    content: `
-## Ravaler sa façade à Châteaubriant et environs
-
-La région de Châteaubriant présente des spécificités qu'il faut prendre en compte pour un ravalement réussi.
-
-### Le climat breton
-
-**Caractéristiques :**
-- Pluviométrie importante (700-900 mm/an)
-- Humidité élevée toute l'année
-- Vents d'ouest fréquents
-- Gel occasionnel en hiver
-
-**Conséquences sur les façades :**
-- Développement de mousses et lichens
-- Risque d'infiltrations
-- Besoin de protection renforcée
-
-**Solutions adaptées :**
-- Traitement hydrofuge systématique
-- Enduits respirants (chaux recommandé)
-- Traitement anti-mousse préventif
-
-### L'architecture locale
-
-**Styles typiques de la région :**
-- Maisons en pierre de schiste
-- Longères traditionnelles
-- Maisons de bourg en pierre calcaire
-- Pavillons récents en parpaing
-
-**Enduits traditionnels :**
-- Enduit à la chaux (pour le bâti ancien)
-- Teintes ocre, beige, gris clair
-- Respect des joints de pierre
-
-### Réglementation locale
-
-**PLU de Châteaubriant :**
-- Consultation obligatoire en mairie
-- Palette de couleurs réglementée en centre-ville
-- Secteurs protégés autour du château
-
-**Bonnes pratiques :**
-- Demandez l'avis des services urbanisme
-- Respectez l'harmonie du voisinage
-- Privilégiez les teintes traditionnelles
-
-### Nos réalisations locales
-
-Depuis plus de 15 ans, Cakir Facades intervient à Châteaubriant et dans un rayon de 250 km :
-- Nantes et agglomération
-- Rennes et agglomération
-- Angers
-- Le Mans
-- Et toutes les communes environnantes
-
-### Avantages de choisir un artisan local
-
-1. **Connaissance du terrain** : nous connaissons les spécificités locales
-2. **Réactivité** : intervention rapide en cas de besoin
-3. **Suivi de proximité** : disponibilité pour le service après-vente
-4. **Références vérifiables** : visitez nos réalisations près de chez vous
-
-Contactez-nous pour un devis gratuit adapté à votre projet et à votre région.
-    `,
-    tags: ['Châteaubriant', 'Loire-Atlantique', 'local', 'climat', 'architecture'],
-    relatedServices: ['ravalement-de-facades', 'enduit-de-facade'],
-  },
-  {
-    id: 10,
-    slug: 'comment-choisir-son-facadier-10-criteres',
-    title: 'Comment Choisir Son Façadier : 10 Critères Essentiels',
-    excerpt: 'Les 10 critères pour bien choisir votre façadier. Qualifications, assurances, devis... tout ce qu\'il faut vérifier.',
-    category: 'conseils',
-    image: '/images/projects/projet-12-neuf-beige/cover.jpg',
-    author: 'Équipe Cakir Facades',
-    date: '2024-11-01',
-    readTime: '7 min',
-    featured: true,
-    content: `
-## 10 critères pour choisir le bon façadier
-
-Le choix de votre façadier est crucial pour la réussite de vos travaux. Voici les 10 points essentiels à vérifier.
-
-### 1. L'assurance décennale
-
-**Vérifiez :**
-- Attestation d'assurance à jour
-- Couverture des travaux prévus
-- Validité pendant toute la durée du chantier
-
-**Attention :** Demandez une attestation nominative, pas une simple carte professionnelle.
-
-### 2. Les qualifications professionnelles
-
-**Labels et certifications :**
-- Qualibat (qualification métier)
-- RGE (pour les aides si isolation)
-- Artisan qualifié
-
-**Notre statut :** Cakir Facades est artisan qualifié avec garantie décennale.
-
-### 3. L'expérience et les références
-
-**Demandez :**
-- Années d'expérience
-- Photos de réalisations similaires
-- Coordonnées d'anciens clients
-- Possibilité de visiter un chantier
-
-### 4. Le devis détaillé
-
-**Un bon devis doit mentionner :**
-- Description précise des travaux
-- Quantités et surfaces
-- Prix unitaires et total HT/TTC
-- Conditions de paiement
-- Délais de réalisation
-- Durée de validité
-
-### 5. La visite préalable
-
-**Méfiez-vous si :**
-- Le devis est fait sans visite
-- L'artisan ne pose pas de questions
-- Il ne prend pas de mesures
-
-### 6. Le délai d'intervention
-
-**Points à clarifier :**
-- Date de début des travaux
-- Durée prévisionnelle
-- Planning détaillé
-- Conditions météo
-
-### 7. Les matériaux utilisés
-
-**Demandez des précisions sur :**
-- Marques et références
-- Fiches techniques
-- Origine des produits
-- Garanties fabricant
-
-### 8. La communication
-
-**Bons signes :**
-- Répond rapidement aux appels
-- Explique clairement les travaux
-- Propose des solutions
-- Reste à l'écoute
-
-### 9. Le contrat et les garanties
-
-**Le contrat doit préciser :**
-- Description complète des travaux
-- Prix ferme et définitif
-- Modalités de paiement
-- Garanties (parfait achèvement, décennale)
-- Conditions d'annulation
-
-### 10. Le bouche-à-oreille
-
-**Informez-vous :**
-- Avis en ligne (Google, Pages Jaunes)
-- Recommandations de voisins
-- Témoignages clients
-
-### Pourquoi choisir Cakir Facades ?
-
-✓ Artisan façadier depuis plus de 15 ans
-✓ Garantie décennale à jour
-✓ Devis gratuit et détaillé
-✓ Références visitables
-✓ Intervention dans un rayon de 250 km
-✓ Suivi personnalisé du projet
-    `,
-    tags: ['choix', 'façadier', 'critères', 'qualité', 'artisan'],
-    relatedServices: ['ravalement-de-facades', 'enduit-de-facade', 'isolation-exterieure', 'neuf-et-renovation'],
+- **Microfissures** : traitement par imperméabilisation souple
+- **Fissures structurelles** : ouverture, traitement et rebouchage avec un mortier adapté
+- **Fissures actives** : pose de bandes de pontage pour absorber les mouvements
+
+### 4. La réparation des joints de pierre
+
+Pour les façades en pierre, la **réfection des joints** est une étape cruciale. Les anciens joints dégradés sont purgés puis remplacés par un mortier de chaux adapté à la pierre.
+
+Le rejointoiement demande un savoir-faire particulier :
+
+- Choix du mortier compatible avec la pierre
+- Respect de la profondeur et de l'épaisseur des joints
+- Finition adaptée au style du bâtiment (joint creux, joint affleurant, joint beurré)
+
+### 5. L'application de l'enduit
+
+Une fois le support préparé, l'enduit de finition est appliqué. Il protège la façade et lui redonne un aspect neuf.
+
+### 6. La protection finale
+
+Un traitement hydrofuge peut être appliqué en finition pour **protéger la façade** contre les infiltrations d'eau tout en laissant respirer le support.
+
+## Rénovation et réglementation
+
+En France, le ravalement de façade est **obligatoire tous les 10 ans** dans certaines communes. Renseignez-vous auprès de votre mairie pour connaître les obligations locales.
+
+## Le coût d'une rénovation de façade
+
+Le prix d'un ravalement varie selon plusieurs facteurs :
+
+- La surface de la façade
+- L'état du support
+- Le type de finition choisi
+- L'accessibilité du chantier
+
+**Demandez un devis gratuit** pour connaître le coût exact de votre projet. Chez Cakir Facades, nous établissons des devis détaillés et transparents, sans engagement.
+
+## Faites confiance à Cakir Facades
+
+Spécialistes du ravalement et de la rénovation de façade, nous intervenons sur tout le département de la Loire-Atlantique. Notre expertise couvre aussi bien les **façades modernes** que les **bâtis anciens en pierre**. Chaque chantier est réalisé avec soin et dans le respect des règles de l'art.`
   },
 ]
 
-export const getFeaturedArticles = () => {
-  return blogArticles.filter(article => article.featured)
-}
-
-export const getArticlesByCategory = (categorySlug) => {
-  if (categorySlug === 'tous') return blogArticles
-  return blogArticles.filter(article => article.category === categorySlug)
+export const formatDate = (dateString) => {
+  const date = new Date(dateString)
+  return date.toLocaleDateString('fr-FR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
 }
 
 export const getArticleBySlug = (slug) => {
@@ -817,15 +412,10 @@ export const getArticleBySlug = (slug) => {
 }
 
 export const getRelatedArticles = (currentSlug, limit = 3) => {
-  const current = getArticleBySlug(currentSlug)
+  const current = blogArticles.find(a => a.slug === currentSlug)
   if (!current) return []
-
   return blogArticles
-    .filter(article => article.slug !== currentSlug && article.category === current.category)
+    .filter(a => a.slug !== currentSlug)
+    .sort((a, b) => (a.category === current.category ? -1 : 1))
     .slice(0, limit)
-}
-
-export const formatDate = (dateString) => {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' }
-  return new Date(dateString).toLocaleDateString('fr-FR', options)
 }

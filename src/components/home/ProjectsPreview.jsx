@@ -50,8 +50,9 @@ export default function ProjectsPreview() {
                     <span className="inline-block bg-cakir-gold/90 text-white text-xs font-medium px-3 py-1 rounded-full capitalize">
                       {project.category === 'construction-neuf' ? 'Construction Neuf' :
                        project.category === 'enduit-imitation-pierre' ? 'Enduit Imitation Pierre' :
+                       project.category === 'gouttiere-aluminium' ? 'Gouttière en Aluminium' :
+                       project.category === 'isolant-exterieur' ? 'Isolant Extérieur' :
                        project.category === 'renovation' ? 'Rénovation' :
-                       project.category === 'isolation-exterieure' ? 'Isolation Extérieure' :
                        project.category}
                     </span>
                   </div>

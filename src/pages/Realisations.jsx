@@ -7,12 +7,12 @@ import PageHero from '../components/ui/PageHero'
 import { seoMeta } from '../data/seo-meta'
 import { projects, projectCategories, getProjectsByCategory } from '../data/projects'
 
-// Category cover images - first project's cover from each category
 const categoryCovers = {
-  'construction-neuf': '/images/projects/projet-17-neuf-moderne-blanc-gris/cover.jpg',
-  'enduit-imitation-pierre': '/images/projects/projet-07-enduit-interieur/cover.jpg',
-  'renovation': '/images/projects/projet-01-ravalement-immeuble-pierre/cover.jpg',
-  'isolation-exterieure': '/images/projects/projet-08-isolation-ite/cover.jpg',
+  'construction-neuf': '/images/projects/construction-neuf/cover.jpg',
+  'enduit-imitation-pierre': '/images/projects/enduit-imitation-pierre/cover.jpg',
+  'gouttiere-aluminium': '/images/projects/gouttiere-aluminium/cover.jpg',
+  'isolant-exterieur': '/images/projects/isolant-exterieur/cover.jpg',
+  'renovation': '/images/projects/renovation/cover.jpg',
 }
 
 export default function Realisations() {
@@ -100,7 +100,7 @@ export default function Realisations() {
       <PageHero
         title="Nos Réalisations"
         subtitle="Découvrez nos projets de façades réalisés en Loire-Atlantique. Enduits décoratifs, ravalement, isolation thermique... Chaque projet est unique et réalisé avec passion."
-        image="/images/projects/projet-01-ravalement-immeuble-pierre/cover.jpg"
+        image="/images/hero/hero-realisations.png"
         breadcrumbs={breadcrumbs}
         badge="Portfolio"
       />
