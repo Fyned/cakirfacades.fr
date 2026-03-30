@@ -37,7 +37,7 @@ export default function Blog() {
       <PageHero
         title="Nos Articles et Guides"
         subtitle="Retrouvez nos conseils d'experts sur le ravalement de façade, l'isolation thermique, les aides financières et l'entretien de vos façades."
-        image="/images/hero/hero-blog.png"
+        image="/images/hero/hero-blog.webp"
         breadcrumbs={breadcrumbs}
         badge="Blog & Conseils"
       />

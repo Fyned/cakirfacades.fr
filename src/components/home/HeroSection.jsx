@@ -24,7 +24,7 @@ export default function HeroSection() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: 'url(/images/hero/hero-home.png)',
+            backgroundImage: 'url(/images/hero/hero-home.webp)',
             backgroundColor: '#1a1a1a'
           }}
         />

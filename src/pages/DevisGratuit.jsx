@@ -112,7 +112,7 @@ export default function DevisGratuit() {
       <PageHero
         title="Demandez Votre Devis Gratuit"
         subtitle="Remplissez le formulaire ci-dessous pour recevoir un devis personnalisé pour votre projet de façade. Réponse garantie sous 24h."
-        image="/images/hero/hero-devis.png"
+        image="/images/hero/hero-devis.webp"
         breadcrumbs={breadcrumbs}
         badge="Devis Gratuit"
       />

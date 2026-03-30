@@ -159,7 +159,7 @@ export default function FAQ() {
       <PageHero
         title="Questions Fréquentes"
         subtitle="Retrouvez les réponses à toutes vos questions sur le ravalement de façade, l'isolation extérieure, les prix, les aides et les garanties."
-        image="/images/hero/hero-faq.png"
+        image="/images/hero/hero-faq.webp"
         breadcrumbs={breadcrumbs}
         badge="Centre d'aide"
       />

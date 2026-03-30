@@ -24,7 +24,7 @@ export default function Services() {
       <PageHero
         title="Nos Services de Façade Professionnels"
         subtitle="Découvrez notre gamme complète de prestations pour sublimer et protéger vos façades. De l'enduit décoratif à l'isolation thermique, nous avons la solution pour votre projet."
-        image="/images/hero/hero-about.png"
+        image="/images/hero/hero-about.webp"
         breadcrumbs={breadcrumbs}
         badge="Nos Expertises"
       />

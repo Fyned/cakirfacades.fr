@@ -12,7 +12,7 @@ export const services = [
 Que vous optiez pour un enduit monocouche (application rapide et économique) ou un enduit traditionnel multicouche (finition haut de gamme), nous vous garantissons un résultat impeccable. Notre équipe maîtrise toutes les finitions : grattée pour un aspect contemporain, talochée pour une surface lisse et élégante, ribbée pour un effet strié décoratif, ou encore écrasée pour un rendu rustique.
 
 Nous intervenons sur tous types de supports (parpaing, brique, béton) et respectons scrupuleusement les temps de séchage et les normes DTU en vigueur. Chaque chantier fait l'objet d'une préparation minutieuse : protection des ouvertures, mise en place des échafaudages certifiés, et contrôle qualité à chaque étape.`,
-    image: '/images/projects/construction-neuf/cover.jpg',
+    image: '/images/projects/construction-neuf/cover.webp',
     icon: 'Building2',
     features: [
       'Enduit monocouche et traditionnel',
@@ -45,7 +45,7 @@ Nous intervenons sur tous types de supports (parpaing, brique, béton) et respec
 Chaque « pierre » est travaillée individuellement : les joints sont creusés à la main selon un calepinage préétabli, les surfaces sont texturées pour un effet naturel, et plusieurs nuances de teintes sont appliquées pour donner profondeur et réalisme au rendu final.
 
 Le résultat est saisissant : votre façade prend l'apparence d'un authentique mur en pierres, pour une fraction du coût d'un parement en vraie pierre. Cette technique s'applique aussi bien sur des façades complètes que sur des éléments ponctuels : soubassements, encadrements de fenêtres, piliers ou murets de clôture.`,
-    image: '/images/projects/enduit-imitation-pierre/cover.jpg',
+    image: '/images/projects/enduit-imitation-pierre/cover.webp',
     icon: 'PaintBucket',
     features: [
       'Sculpture artisanale dans l\'enduit frais',
@@ -78,7 +78,7 @@ Le résultat est saisissant : votre façade prend l'apparence d'un authentique m
 Contrairement aux gouttières en PVC qui jaunissent et se fragilisent avec le temps, l'aluminium laqué conserve son aspect et sa résistance pendant 30 à 50 ans. Il ne rouille pas, ne se déforme pas et nécessite un entretien minimal.
 
 Nos gouttières sont fabriquées sur mesure directement sur votre chantier grâce à une profileuse mobile. Cette fabrication en continu élimine les raccords et les soudures, garantissant une étanchéité parfaite et un rendu esthétique impeccable. Avec plus de 200 coloris RAL disponibles, vos gouttières s'intègrent harmonieusement à votre toiture et votre façade.`,
-    image: '/images/projects/gouttiere-aluminium/cover.jpg',
+    image: '/images/projects/gouttiere-aluminium/cover.webp',
     icon: 'Droplets',
     features: [
       'Fabrication sur mesure sur le chantier',
@@ -113,7 +113,7 @@ Le principe est simple : un manteau isolant (polystyrène expansé ou laine de r
 Les résultats sont immédiats : jusqu'à 30% d'économies sur vos factures de chauffage, un confort thermique été comme hiver, et une façade entièrement rénovée. De plus, l'ITE n'empiète pas sur votre surface habitable, contrairement à l'isolation par l'intérieur.
 
 L'ITE est éligible à de nombreuses aides financières : MaPrimeRénov', CEE, éco-PTZ et TVA réduite à 5,5%.`,
-    image: '/images/projects/isolant-exterieur/cover.jpg',
+    image: '/images/projects/isolant-exterieur/cover.webp',
     icon: 'Thermometer',
     features: [
       'Pose de panneaux isolants (PSE, laine de roche)',
@@ -148,7 +148,7 @@ Notre approche de la rénovation de façade est méthodique et complète. Nous c
 Pour les façades en pierre, nous réalisons le rejointoiement avec des mortiers de chaux compatibles avec la pierre existante. Ce travail minutieux requiert un véritable savoir-faire artisanal pour respecter l'authenticité du bâti tout en assurant sa pérennité.
 
 En France, le ravalement est obligatoire tous les 10 ans dans certaines communes. C'est aussi l'occasion de valoriser votre patrimoine et d'améliorer le confort de votre habitation.`,
-    image: '/images/projects/renovation/cover.jpg',
+    image: '/images/projects/renovation/cover.webp',
     icon: 'Hammer',
     features: [
       'Nettoyage haute pression et sablage',
