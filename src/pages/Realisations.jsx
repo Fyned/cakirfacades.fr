@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
-import { MapPin, X, ChevronLeft, ChevronRight, ArrowRight, ArrowLeft, Images } from 'lucide-react'
+import { X, ChevronLeft, ChevronRight, ArrowRight, ArrowLeft, Images } from 'lucide-react'
 import SEOHead from '../components/seo/SEOHead'
 import { LocalBusinessSchema, BreadcrumbSchema } from '../components/seo/StructuredData'
 import Button from '../components/ui/Button'
@@ -233,46 +233,33 @@ export default function Realisations() {
                       </div>
                     </div>
 
-                    {/* Content */}
-                    <div className="p-5">
-                      <h3 className="font-bold text-lg mb-2 group-hover:text-cakir-gold transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-cakir-black/60 text-sm mb-3 line-clamp-2">
-                        {project.description}
-                      </p>
-                      <div className="flex items-center gap-2 text-sm text-cakir-black/50">
-                        <MapPin className="w-4 h-4" />
-                        {project.location}
+                    {/* Thumbnails */}
+                    {project.images.length > 1 && (
+                      <div className="flex gap-2 p-4 overflow-x-auto">
+                        {project.images.slice(0, 4).map((img, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => openLightbox(project, idx)}
+                            className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden hover:ring-2 hover:ring-cakir-gold transition-all"
+                          >
+                            <img
+                              src={img}
+                              alt={`${project.title} - ${idx + 1}`}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                          </button>
+                        ))}
+                        {project.images.length > 4 && (
+                          <button
+                            onClick={() => openLightbox(project, 4)}
+                            className="flex-shrink-0 w-14 h-14 rounded-lg bg-cakir-black/10 flex items-center justify-center text-sm font-medium text-cakir-black/60 hover:bg-cakir-gold/20 hover:text-cakir-gold transition-colors"
+                          >
+                            +{project.images.length - 4}
+                          </button>
+                        )}
                       </div>
-                      {/* Thumbnails */}
-                      {project.images.length > 1 && (
-                        <div className="flex gap-2 mt-4 overflow-x-auto pb-1">
-                          {project.images.slice(0, 4).map((img, idx) => (
-                            <button
-                              key={idx}
-                              onClick={() => openLightbox(project, idx)}
-                              className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden hover:ring-2 hover:ring-cakir-gold transition-all"
-                            >
-                              <img
-                                src={img}
-                                alt={`${project.title} - ${idx + 1}`}
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                              />
-                            </button>
-                          ))}
-                          {project.images.length > 4 && (
-                            <button
-                              onClick={() => openLightbox(project, 4)}
-                              className="flex-shrink-0 w-14 h-14 rounded-lg bg-cakir-black/10 flex items-center justify-center text-sm font-medium text-cakir-black/60 hover:bg-cakir-gold/20 hover:text-cakir-gold transition-colors"
-                            >
-                              +{project.images.length - 4}
-                            </button>
-                          )}
-                        </div>
-                      )}
-                    </div>
+                    )}
                   </article>
                 ))}
               </div>
@@ -350,21 +337,8 @@ export default function Realisations() {
           {/* Info & Thumbnails */}
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
             <div className="container-custom">
-              <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-                <div className="max-w-2xl">
-                  <h3 className="text-white text-xl font-bold mb-1">
-                    {selectedProject.title}
-                  </h3>
-                  {/* Project Description */}
-                  <p className="text-white/80 text-sm mb-2 line-clamp-2">
-                    {selectedProject.description}
-                  </p>
-                  <p className="text-white/60 text-sm flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    {selectedProject.location}
-                  </p>
-                </div>
-                <div className="text-white/60 text-sm flex-shrink-0">
+              <div className="flex items-end justify-end">
+                <div className="text-white/60 text-sm">
                   {currentImageIndex + 1} / {selectedProject.images.length}
                 </div>
               </div>

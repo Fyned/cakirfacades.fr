@@ -64,15 +64,6 @@ export default function ProjectsPreview() {
                     </div>
                   </div>
 
-                  {/* Title & Location */}
-                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-xl font-semibold text-white mb-1">
-                      {project.title}
-                    </h3>
-                    <p className="text-white/70 text-sm">
-                      {project.location}
-                    </p>
-                  </div>
                 </div>
               </div>
             </StaggerItem>
